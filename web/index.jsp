@@ -37,21 +37,21 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="web/png1.jpg" class="d-block w-100" alt="Movie 1">
+                    <img src="Images/png1.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 1">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Blockbuster Movie 1</h5>
                         <p>Don't miss out on the action!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="web/png2.jpg" class="d-block w-100" alt="Movie 2">
+                    <img src="Images/png2.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 2">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Epic Drama Movie 2</h5>
                         <p>Experience the thrill!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="wen/png3.jpg" class="d-block w-100" alt="Movie 3">
+                    <img src="Images/png3.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 3">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Family Fun Movie 3</h5>
                         <p>Perfect for everyone!</p>
