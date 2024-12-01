@@ -38,7 +38,7 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -50,4 +50,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
