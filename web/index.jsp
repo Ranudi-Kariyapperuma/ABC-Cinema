@@ -8,9 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="HomePage/homePageStyle.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link rel="stylesheet" href="homePageStyle.css">
-       
         <title>ABC Cinema</title>
     </head>
     <body>
