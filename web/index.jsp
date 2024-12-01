@@ -99,20 +99,22 @@
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-               
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="images/movie4.jpg" class="card-img-top" alt="Movie 4">
+                         <div class="card mx-2" style="width: 18rem;">
+                            <img src="Images/landscape-poster-4_orig.jpg" class="card-img-top" alt="Movie 4">
                             <div class="card-body">
                                 <h5 class="card-title">Comedy Movie 4</h5>
                                 <p class="card-text">Laugh out loud with this comedy hit.</p>
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
+                        
+                    </div>
+                </div>
+               
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                       
                         <div class="card mx-2" style="width: 18rem;">
                             <img src="images/movie5.jpg" class="card-img-top" alt="Movie 5">
                             <div class="card-body">
@@ -131,6 +133,14 @@
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
      
         <%--<form action="homePageServlet" method="post">
