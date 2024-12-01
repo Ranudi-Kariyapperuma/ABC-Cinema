@@ -86,11 +86,11 @@ public class homePageServlet extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-   /* @Override
+   @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    */
+   
 }
 
 
