@@ -58,7 +58,7 @@ footer  a{
     font-weight: bold;
 }
 
-carousel image{
-    height: 10px;
-    width: 3px;
+.custom-carousel-image {
+    height: 400px; 
+    object-fit: contain; 
 }
