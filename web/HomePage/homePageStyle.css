@@ -52,8 +52,13 @@ footer {
     width: 100%;
     
 }
-footer ul li a{
+footer  a{
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+carousel image{
+    height: 10px;
+    width: 3px;
 }
