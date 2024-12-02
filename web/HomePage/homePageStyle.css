@@ -28,7 +28,7 @@ header {
     text-align: center;
 }
 .custom-navbar {
-    position: fixed; /* Makes the navbar float */
+    position: absolute; /* Makes the navbar float */
     top: 0; /* Ensures it stays at the top */
     width: 100%; /* Stretches across the width of the viewport */
     z-index: 1030; /* Keeps it above other elements */
@@ -103,6 +103,16 @@ footer  a:hover{
     transform: scale(1.2); 
 }
 
+.footer-icons .icon2{
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons .icon2:hover{
+     transform: scale(1.2); 
+}
 /*.carousel {
     max-width: 80%; 
     margin: 0 auto;
@@ -177,6 +187,7 @@ footer  a:hover{
 .card-bodyv{
    
    height:300px;
+ 
    
   
    
