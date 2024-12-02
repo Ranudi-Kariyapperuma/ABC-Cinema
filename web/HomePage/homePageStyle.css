@@ -44,6 +44,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+nav ul li a:hover {
+    color:yellow;
+}
 
 main {
     padding: 5px;
@@ -65,6 +68,10 @@ footer  a{
     text-decoration: none;
     font-weight: bold;
 }
+
+footer  a:hover{
+   color: yellow; 
+}
 /*.carousel {
     max-width: 80%; 
     margin: 0 auto;
@@ -81,9 +88,16 @@ footer  a{
     background-color:  #000000; 
     color:white;
     border-color: #000000;
+  
 }
 
 .btn-primary{
     background-color:yellow;
+    opacity: 0.8;
     color:#000000;
+    border-radius: 0px;
+}
+
+.btn-primary a:hover{
+    color:white;
 }
