@@ -90,7 +90,7 @@ footer  a:hover{
 .footer-icons {
     position: absolute; 
     bottom: 20px; /* Distance from the bottom of the footer */
-    left: 20px; /* Distance from the left side */
+    left: 40px; /* Distance from the left side */
     display: flex; 
     gap: 10px; 
 }
@@ -111,13 +111,13 @@ footer  a:hover{
 .footer-icons2 {
     position: absolute; 
     bottom: 20px; /* Distance from the bottom of the footer */
-    left: 20px; /* Distance from the left side */
+    right: 40px; /* Distance from the left side */
     display: flex; 
     gap: 10px; 
 }
 
 .footer-icons2 .icon2 {
-    width: 24px; 
+    width: 60px; 
     height: 24px; 
     cursor: pointer; 
     transition: transform 0.3s ease-in-out; 
