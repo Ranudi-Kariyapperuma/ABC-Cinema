@@ -38,6 +38,7 @@
     </header>
     <main>
         <br>
+        
          <!-- Carousel -->
         <div id="carouselid" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -78,6 +79,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-center">
+                        
                         <div class="card mx-2" style="width: 18rem;">
                             <img src="Images/png1.jpg" class="card-img-top" alt="Movie 1">
                             <div class="card-body">
