@@ -84,6 +84,9 @@ footer  a{
 footer  a:hover{
    color: yellow; 
 }
+
+/*Left bottom footer icon*/
+
 .footer-icons {
     position: absolute; 
     bottom: 20px; /* Distance from the bottom of the footer */
@@ -103,16 +106,35 @@ footer  a:hover{
     transform: scale(1.2); 
 }
 
-.footer-icons .icon2{
+/*Right Bottom footer Icon*/
+
+.footer-icons2 {
+    position: absolute; 
+    bottom: 20px; /* Distance from the bottom of the footer */
+    left: 20px; /* Distance from the left side */
+    display: flex; 
+    gap: 10px; 
+}
+
+.footer-icons2 .icon2 {
     width: 24px; 
     height: 24px; 
     cursor: pointer; 
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; 
 }
 
-.footer-icons .icon2:hover{
-     transform: scale(1.2); 
+.footer-icons2 .icon2:hover {
+    transform: scale(1.2); 
+
+.footer-icons .icon2{
+    width: 50px; 
+    height: 24px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+    bottom: 20px; /* Distance from the bottom of the footer */
+    left: 20px; 
 }
+
 /*.carousel {
     max-width: 80%; 
     margin: 0 auto;
