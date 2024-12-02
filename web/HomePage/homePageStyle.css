@@ -17,8 +17,16 @@ body {
 header {
     background: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px ;
     text-align: center;
+}
+.custom-navbar {
+    position: fixed; /* Makes the navbar float */
+    top: 0; /* Ensures it stays at the top */
+    width: 100%; /* Stretches across the width of the viewport */
+    z-index: 1030; /* Keeps it above other elements */
+    opacity: 0.9; /* Reduces opacity for a slightly transparent look */
+    transition: opacity 0.3s ease-in-out; /* Adds a smooth opacity change effect */
 }
 
 nav ul {
@@ -38,7 +46,7 @@ nav ul li a {
 }
 
 main {
-    padding: 30px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -46,8 +54,8 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 5px ;
+    position:fixed;
     bottom: 0;
     width: 100%;
     
@@ -57,8 +65,25 @@ footer  a{
     text-decoration: none;
     font-weight: bold;
 }
+/*.carousel {
+    max-width: 80%; 
+    margin: 0 auto;
+}*/
 
 .custom-carousel-image {
-    height: 400px; 
+    height: 500px; 
+    width: auto;
     object-fit: contain; 
+}
+
+.card-body{
+    opacity: 0.9;
+    background-color:  #000000; 
+    color:white;
+    border-color: #000000;
+}
+
+.btn-primary{
+    background-color:yellow;
+    color:#000000;
 }
