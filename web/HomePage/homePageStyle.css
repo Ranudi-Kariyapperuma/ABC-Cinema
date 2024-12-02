@@ -124,7 +124,8 @@ footer  a:hover{
 }
 
 .footer-icons2 .icon2:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
+}
 
 .footer-icons .icon2{
     width: 50px; 
