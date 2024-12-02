@@ -17,12 +17,9 @@
         <link rel="stylesheet" href="MoviePage/MoviePageStyle.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ABC Cinema</title>
-         
-         
          </head>
     <body>
        <header>
-                
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
                      <div class="container-fluid">
                          <h1>ABC CINEMA</h1><br>
@@ -35,6 +32,9 @@
             </ul>
                 </nav>
     </header>
+        
+        
+        
   
     <footer>
         <p>© 2024 ABC Cinema. All Rights Reserved.</p>

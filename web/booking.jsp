@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/favicon-icon" href="favicon.png">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="WEB-INF/book.css" rel="stylesheet" type="text/css">
