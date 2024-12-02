@@ -27,17 +27,19 @@
                          <h1>ABC CINEMA</h1><br>
                          <ul>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="movie.jsp">Movies</a></li>
-                <li><a href="ticket.jsp">Book Tickets</a></li>
+                <li><a href="movieDetails.jsp">Movies</a></li>
+                <li><a href="booking.jsp">Book Tickets</a></li>
                 <li><a href="feedback.jsp">Feedback</a></li>
                 <li><a href="contact.jsp">Contact Us</a></li>
+                <li><a href="adminLogin.jsp">Login</a></li>
+                
             </ul>
                 </nav>
     </header>
     <main>
         <br>
          <!-- Carousel -->
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselid" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="Images/landscape-poster-1_orig.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 1">
@@ -57,11 +59,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselid" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselid" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -70,7 +72,7 @@
          <p><h2>Now Showing</h2></p>
     <br>
             <!-- Card Slider -->
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="cardCarouselid2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                
                 <!-- Slide 1 -->
@@ -84,6 +86,7 @@
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
+                        
                         <div class="card mx-2" style="width: 18rem;">
                             <img src="Images/png2.jpg" class="card-img-top" alt="Movie 2">
                             <div class="card-body">
@@ -92,6 +95,7 @@
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
+                        
                         <div class="card mx-2" style="width: 18rem;">
                             <img src="Images/png3.jpg" class="card-img-top" alt="Movie 3">
                             <div class="card-body">
@@ -100,6 +104,7 @@
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
+                        
                          <div class="card mx-2" style="width: 18rem;">
                             <img src="Images/landscape-poster-4_orig.jpg" class="card-img-top" alt="Movie 4">
                             <div class="card-body">
@@ -110,22 +115,24 @@
                         </div>
                         
                     </div>
-                </div>
+                </div
+                
                
                 <!-- Slide 2 -->
-                <div class="carousel-item">
+                <div class="carousel-item ">
                     <div class="d-flex justify-content-center">
                        
                         <div class="card mx-2" style="width: 18rem;">
-                            <img src="images/movie5.jpg" class="card-img-top" alt="Movie 5">
+                            <img src="Images/png5.jpg" class="card-img-top" alt="Movie 5">
                             <div class="card-body">
                                 <h5 class="card-title">Action Movie 5</h5>
                                 <p class="card-text">Heart-pumping action awaits.</p>
                                 <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
+                        
                         <div class="card mx-2" style="width: 18rem;">
-                            <img src="images/movie6.jpg" class="card-img-top" alt="Movie 6">
+                            <img src="Images/png6.jpg" class="card-img-top" alt="Movie 6">
                             <div class="card-body">
                                 <h5 class="card-title">Thriller Movie 6</h5>
                                 <p class="card-text">Edge-of-the-seat suspense guaranteed.</p>
@@ -134,15 +141,17 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+           
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselid2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselid2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
             </div>
+        </div>
      
         <%--<form action="homePageServlet" method="post">
             <label center for="username">Enter Username:</label>
