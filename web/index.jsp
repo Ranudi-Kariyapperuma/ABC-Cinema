@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/favicon-icon" href="favicon.png">
         <!--CDN link bootstrap!-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
               integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -26,7 +27,7 @@
                          <h1>ABC CINEMA</h1><br>
                          <ul>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="movies.jsp">Movies</a></li>
+                <li><a href="movie.jsp">Movies</a></li>
                 <li><a href="ticket.jsp">Book Tickets</a></li>
                 <li><a href="feedback.jsp">Feedback</a></li>
                 <li><a href="contact.jsp">Contact Us</a></li>
