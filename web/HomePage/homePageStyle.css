@@ -57,6 +57,7 @@ nav ul li a:hover {
 
 .carousel {
     margin-top: 40px; 
+    margin-bottom:10px;
 }
 
 main {
@@ -83,6 +84,25 @@ footer  a{
 footer  a:hover{
    color: yellow; 
 }
+.footer-icons {
+    position: absolute; 
+    bottom: 20px; /* Distance from the bottom of the footer */
+    left: 20px; /* Distance from the left side */
+    display: flex; 
+    gap: 10px; 
+}
+
+.footer-icons .icon {
+    width: 24px; 
+    height: 24px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.footer-icons .icon:hover {
+    transform: scale(1.2); 
+}
+
 /*.carousel {
     max-width: 80%; 
     margin: 0 auto;
@@ -139,24 +159,26 @@ footer  a:hover{
 }
 
 .card-bg-orange {
-    background-color: rgba(253, 126, 20, 0.8); 
+    background-color: darkgoldenrod; 
     color: white; /* Text color */
 
 }
 
 .card-bg-red {
-    background-color: darkred; 
+    background-color: sienna; 
     color: white; /* Text color */
 }
 
 .card-bg-yellow {
-    background-color: goldenrod; 
+    background-color: rosybrown; 
     color: white;
 }
 
 .card-bodyv{
    
-   height:200px;
+   height:300px;
+   
+  
    
     
 }
