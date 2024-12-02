@@ -6,12 +6,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : Dec 1, 2024, 6:36:43 PM
     Author     : DELL
 */
-body {
-    font-family: Arial, sans-serif;
+html,body {
+    font-family:Arial, sans-serif;
     color:white;
     margin: 0;
     padding: 0;
     background-color:  #000000; /*#f4f4f4*/
+    height:100%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.content-wrapper {
+    flex: 1; 
 }
 
 header {
@@ -88,6 +95,7 @@ footer  a:hover{
     background-color:  #000000; 
     color:white;
     border-color: #000000;
+   
   
 }
 
@@ -96,8 +104,55 @@ footer  a:hover{
     opacity: 0.8;
     color:#000000;
     border-radius: 0px;
+   
 }
 
 .btn-primary a:hover{
     color:white;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+     border-color:#000000;
+    margin:0;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+   border-color:yellow;
+    margin:0;
+}
+.card-body {
+    text-align: center; 
+}
+
+.card-title1{
+    text-align: right;
+    
+}
+
+.card-bg-orange {
+    background-color: rgba(253, 126, 20, 0.8); 
+    color: white; /* Text color */
+
+}
+
+.card-bg-red {
+    background-color: darkred; 
+    color: white; /* Text color */
+}
+
+.card-bg-yellow {
+    background-color: goldenrod; 
+    color: white;
+}
+
+.card-bodyv{
+   
+   height:200px;
+   
+    
 }
