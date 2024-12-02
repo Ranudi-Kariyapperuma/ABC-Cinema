@@ -74,8 +74,8 @@
             </button>
         </div>
          <br>
-         <p><h2>Now Showing</h2></p>
-    <br>
+         <h2>Now Showing</h2>
+   
             <!-- Card Slider -->
         <div id="cardCarouselid2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -217,6 +217,17 @@
 </div> 
         
     <footer>
+        <div class="footer-icons">
+        <a href="https://instagram.com" target="_blank">
+            <img src="Images/icon1.png" alt="Instagram" class="icon">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="Images/icon2.png" alt="Twitter" class="icon">
+        </a>
+        <a href="" target="_blank">
+            <img src="Images/icon3.png" alt="Instagram" class="icon">
+        </a>
+    </div>
         <p>© 2024 ABC Cinema. All Rights Reserved.</p>
         <p>      <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
                 <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
