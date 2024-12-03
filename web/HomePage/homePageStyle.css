@@ -28,12 +28,13 @@ header {
     text-align: center;
 }
 .custom-navbar {
-    position: absolute; /* Makes the navbar float */
+    position: fixed; /* Makes the navbar float */
     top: 0; /* Ensures it stays at the top */
     width: 100%; /* Stretches across the width of the viewport */
     z-index: 1030; /* Keeps it above other elements */
     opacity: 0.9; /* Reduces opacity for a slightly transparent look */
     transition: opacity 0.3s ease-in-out; /* Adds a smooth opacity change effect */
+    left:0px;
 }
 
 nav ul {
