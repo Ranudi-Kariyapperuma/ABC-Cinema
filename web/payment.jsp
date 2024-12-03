@@ -12,7 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Form</title>
+  <title>ABC Cinema Payment Form</title>
 </head>
 <body style="font-family: Arial, sans-serif; background: #121212; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; margin: 0;">
   <div style="background: #1e1e2f; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 400px; width: 100%;">
