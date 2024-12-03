@@ -16,23 +16,154 @@
         <title>Seat Booking</title>
        
         <style>
-            body 
+            html,body 
             {
-                display: flex;
-                justify-content: center;
-                background-color: black;
-                color: white;
+                font-family:Arial, sans-serif;
+                color:white;
                 margin: 0;
-                font-family: Arial, sans-serif;
-                padding: 20px;
+                padding: 0;
+                background-color:  #000000; /*#f4f4f4*/
+                height:100%;
+                display: flex;
+                flex-direction: column;  
             }
-        
+
+           content-wrapper 
+            {
+                flex: 1; 
+            }
+
+            header 
+            {
+                background: #333;
+                color: white;
+                padding: 10px ;
+                text-align: center;
+            }
+
+            .custom-navbar 
+            {
+                position: absolute; /* Makes the navbar float */
+                top: 0; /* Ensures it stays at the top */
+                width: 100%; /* Stretches across the width of the viewport */
+                z-index: 1030; /* Keeps it above other elements */
+                opacity: 0.9; /* Reduces opacity for a slightly transparent look */
+                transition: opacity 0.3s ease-in-out; /* Adds a smooth opacity change effect */
+            }
+
+            nav ul 
+            {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li 
+            {
+                display: inline;
+                margin: 0 15px;
+            }
+
+            nav ul li a 
+            {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            nav ul li a:hover 
+            {
+                color:yellow;
+            }
+
+
+            footer 
+            {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 5px ;
+                position:relative;
+                bottom: 0;
+                width: 100%;
+            }
+
+            footer  a
+            {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            footer  a:hover
+            {
+                color: yellow; 
+            }
+
+            /*Left bottom footer icon*/
+
+            .footer-icons 
+            {
+                position: absolute; 
+                bottom: 20px; /* Distance from the bottom of the footer */
+                left: 40px; /* Distance from the left side */
+                display: flex; 
+                gap: 10px; 
+            }
+
+            .footer-icons .icon 
+            {
+                width: 24px; 
+                height: 24px; 
+                cursor: pointer; 
+                transition: transform 0.3s ease-in-out; 
+            }
+
+            .footer-icons .icon:hover 
+            {
+                transform: scale(1.2); 
+            }
+
+            /*Right Bottom footer Icon*/
+
+            .footer-icons2 
+            {
+                position: absolute; 
+                bottom: 20px; /* Distance from the bottom of the footer */
+                right: 40px; /* Distance from the left side */
+                display: flex; 
+                gap: 10px; 
+            }
+
+            .footer-icons2 .icon2 
+            {
+                width: 60px; 
+                height: 90px; 
+                cursor: pointer; 
+                transition: transform 0.3s ease-in-out; 
+                bottom: 20px; /* Distance from the bottom of the footer */
+                left: 20px; 
+            }
+
+            .footer-icons2 .icon2:hover 
+            {
+                transform: scale(1.2);
+            }
+
+            /*.footer-icons .icon2
+            {
+                width: 50px; 
+                height: 24px; 
+                cursor: pointer; 
+                transition: transform 0.3s ease-in-out;
+            }*/
+
             .container 
             {
                 width: 70%;
                 max-width: 1200px;
                 margin: 0 auto;
                 text-align: center;
+                padding-top: 50px;
             }
         
             .header 
@@ -198,6 +329,40 @@
     </head>
     
     <body>
+        <div class="content-wrapper">
+            <header>
+                
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+                    <div class="container-fluid">
+                        <h1>ABC CINEMA</h1>
+                        
+                        <br>
+                        
+                        <ul>
+                            <li>
+                                <a href="index.jsp">Home</a>
+                            </li>
+                            <li>
+                                <a href="movie.jsp">Movies</a>
+                            </li>
+                            <li>
+                                <a href="booking.jsp">Book Tickets</a>
+                            </li>
+                            <li>
+                                <a href="feedback.jsp">Feedback</a>
+                            </li>
+                            <li>
+                                <a href="contact.jsp">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="adminLogin.jsp">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header> 
+             
+             <br><br>
+
         <div class="container">
             <div class="header">
                 <h3>Buy a ticket</h3>
@@ -494,6 +659,40 @@
 
             <button>Continue</button>
         </div>
+    </div>
+
+    <footer>
+            
+            <div class="footer-icons">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="Images/icon1.png" alt="Instagram" class="icon">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="Images/icon2.png" alt="Twitter" class="icon">
+                </a>
+                <a href="" target="_blank">
+                    <img src="Images/icon3.png" alt="Instagram" class="icon">
+                </a>
+            </div> 
+            <div class="footer-icons2">
+                <a href="" target="_blank">
+                    <img src="Images/pngwing.com(2).png" alt="paypal" class="icon2"></a>
+                <a href="" target="_blank">
+                    <img src="Images/pngwing.com(3).png" alt="Safe payment gate way" class="icon2">
+                </a>
+            </div>
+            
+            <p>© 2024 ABC Cinema. All Rights Reserved.</p>
+            <p>      
+                <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
+                <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
+                <a href="tm.jsp">Terms and Conditions</a>&ensp; &ensp; 
+            </p>
+        </footer>
+                    
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
         
         <script>
             const seatPrices = 
