@@ -484,6 +484,14 @@
             <hr>
    
             <button>Back</button>
+
+            <!-- Form to Redirect to Payment Page -->
+            <form action="payment.jsp" method="post">
+            
+                <!-- Hidden fields to send data to payment.jsp -->
+                <input type="hidden" id="selectedSeats" name="selectedSeats" value="">
+                <input type="hidden" id="totalPrice" name="totalPrice" value="">
+
             <button>Continue</button>
         </div>
         
@@ -526,6 +534,26 @@
                         alert("Invalid selection. Please enter 'adult' or 'child'.");
                     }
                 }
+
+
+                // Update hidden fields with selected seats and total price
+                updateFormFields();
+            }
+
+            function updateFormFields() 
+            {
+                const seatField = document.getElementById("selectedSeats");
+                const priceField = document.getElementById("totalPrice");
+
+                // Calculate total price
+                const totalPrice = selectedSeats.reduce((sum, seat) => 
+                {
+                    return sum + seatPrices[seat.type];
+                }, 0);
+
+                // Update form hidden fields
+                seatField.value = JSON.stringify(selectedSeats);
+                priceField.value = totalPrice;
             }
 
         </script>
