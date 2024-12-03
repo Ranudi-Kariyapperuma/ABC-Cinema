@@ -20,7 +20,7 @@
     
     <!-- Total Business Section -->
     <div id="total-business" style="margin-bottom: 1.5rem;">
-      <h2 style="font-size: 1.25rem; color: #00c4cc; text-align: center;">Total Price: $500.00</h2>
+      <h2 style="font-size: 1.25rem; color: #00c4cc; text-align: center;">Total Price: Rs.1500.00</h2>
       <p style="font-size: 1rem; color: #ccc; text-align: center;">The Total Cost For Your Payment</p>
     </div>
 
