@@ -22,19 +22,20 @@
     <body>
       <div class="content-wrapper">
         <header>
-                
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
                      <div class="container-fluid">
                          <h1>ABC CINEMA</h1><br>
-                         <ul>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="movie.jsp">Movies</a></li>
-                <li><a href="booking.jsp">Book Tickets</a></li>
-                <li><a href="feedback.jsp">Feedback</a></li>
-                <li><a href="contact.jsp">Contact Us</a></li>
-                <li><a href="adminLogin.jsp">Login</a></li>
-                
-            </ul>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                       <li><a href="index.jsp">Home</a></li>
+                       <li><a href="movie.jsp">Movies</a></li>
+                       <li><a href="booking.jsp">Book Tickets</a></li>
+                       <li><a href="feedback.jsp">Feedback</a></li>
+                       <li><a href="contact.jsp">Contact Us</a></li>
+                       <li><a href="adminLogin.jsp">Login</a></li>
+                       </ul>
+                  </div>
+                 </div>
                 </nav>
     </header>
     <main>
@@ -243,7 +244,6 @@
    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-        
     </body>
 </html>
 
