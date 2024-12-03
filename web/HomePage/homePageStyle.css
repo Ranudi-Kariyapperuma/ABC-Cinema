@@ -150,6 +150,7 @@ footer  a:hover{
     background-color:  #000000; 
     color:white;
     border-color: #000000;
+    padding: 20px;
    
   
 }
@@ -171,6 +172,9 @@ footer  a:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
      border-color:#000000;
     margin:0;
+     width: 40rem;
+     
+   
 }
 
 .card:hover {
@@ -182,6 +186,7 @@ footer  a:hover{
 }
 .card-body {
     text-align: center; 
+    
 }
 
 .card-title1{
@@ -190,24 +195,25 @@ footer  a:hover{
 }
 
 .card-bg-orange {
-    background-color: darkgoldenrod; 
+    background-color: darkslategrey; 
     color: white; /* Text color */
 
 }
 
 .card-bg-red {
-    background-color: sienna; 
+    background-color: #444; 
     color: white; /* Text color */
 }
 
 .card-bg-yellow {
-    background-color: rosybrown; 
+    background-color: #333; 
     color: white;
 }
 
 .card-bodyv{
    
    height:300px;
+   
  
    
   
