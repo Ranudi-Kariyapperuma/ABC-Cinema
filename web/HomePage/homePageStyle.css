@@ -118,23 +118,24 @@ footer  a:hover{
 
 .footer-icons2 .icon2 {
     width: 60px; 
-    height: 24px; 
+    height: 90px; 
     cursor: pointer; 
     transition: transform 0.3s ease-in-out; 
+     bottom: 20px; /* Distance from the bottom of the footer */
+    left: 20px; 
 }
 
 .footer-icons2 .icon2:hover {
     transform: scale(1.2);
 }
 
-.footer-icons .icon2{
+/*.footer-icons .icon2{
     width: 50px; 
     height: 24px; 
     cursor: pointer; 
     transition: transform 0.3s ease-in-out;
-    bottom: 20px; /* Distance from the bottom of the footer */
-    left: 20px; 
-}
+   
+}*/
 
 /*.carousel {
     max-width: 80%; 
