@@ -17,11 +17,19 @@
 <body style="font-family: Arial, sans-serif; background: #121212; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; margin: 0;">
   <div style="background: #1e1e2f; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); max-width: 400px; width: 100%;">
     <h1 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem;">Payment Details</h1>
+    
+    <!-- Total Business Section -->
+    <div id="total-business" style="margin-bottom: 1.5rem;">
+      <h2 style="font-size: 1.25rem; color: #00c4cc; text-align: center;">Total Price: $500.00</h2>
+      <p style="font-size: 1rem; color: #ccc; text-align: center;">The Total Cost For Your Payment</p>
+    </div>
+
     <div id="payment-icons" style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
       <img id="visa-icon" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn3.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcR_FrTaaaGEk9eULQpb355SxtAFizG5jleBqp_1q8j2dgMxqfHT&psig=AOvVaw3WvMflc_7N9gQl4mCz2Vx2&ust=1733329785163000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCOCw1-OCjIoDFQAAAAAdAAAAABAE.svg" alt="Visa" style="width: 40px; background: #fff; border-radius: 5px; padding: 5px; border: 1px solid #ccc; cursor: pointer;" onclick="toggleForm('visa')">
       <img id="mastercard-icon" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" style="width: 40px; background: #fff; border-radius: 5px; padding: 5px; border: 1px solid #ccc; cursor: pointer;" onclick="toggleForm('mastercard')">
       <img id="paypal-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="width: 40px; background: #fff; border-radius: 5px; padding: 5px; border: 1px solid #ccc; cursor: pointer;" onclick="toggleForm('paypal')">
     </div>
+    
     <div id="form-container">
       <!-- Default Credit Card Form -->
       <form id="credit-card-form">
@@ -67,7 +75,10 @@
           <label for="cardholder-name">Cardholder Name</label>
           <input type="text" id="cardholder-name" placeholder="Name on the Card" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #555; background: #2b2b3f; color: #fff;">
         </div>
-        <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">Pay Now</button>
+        <!-- Centering Pay Now Button -->
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+          <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; width: 100%;">Pay Now</button>
+        </div>
       </form>
     </div>
   </div>
@@ -96,7 +107,9 @@
               <label for="paypal-email">PayPal Email</label>
               <input type="email" id="paypal-email" placeholder="example@paypal.com" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #555; background: #2b2b3f; color: #fff;">
             </div>
-            <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">Pay Now</button>
+            <div style="display: flex; justify-content: center; margin-top: 1rem;">
+              <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; width: 100%;">Pay Now</button>
+            </div>
           </form>
         `;
       } else {
@@ -144,7 +157,10 @@
               <label for="cardholder-name">Cardholder Name</label>
               <input type="text" id="cardholder-name" placeholder="Name on the Card" style="padding: 0.5rem; border-radius: 5px; border: 1px solid #555; background: #2b2b3f; color: #fff;">
             </div>
-            <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">Pay Now</button>
+            <!-- Centering Pay Now Button -->
+            <div style="display: flex; justify-content: center; margin-top: 1rem;">
+              <button type="submit" style="padding: 0.8rem; border: none; border-radius: 5px; background: #007BFF; color: #fff; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; width: 100%;">Pay Now</button>
+            </div>
           </form>
         `;
       }
