@@ -227,8 +227,12 @@
         <a href="" target="_blank">
             <img src="Images/icon3.png" alt="Instagram" class="icon">
         </a>
+        </div> 
+            <div class="footer-icons2">
             <a href="" target="_blank">
-            <img src="Images/pngwing.com(2).png" alt="paypal" class="icon2">
+                <img src="Images/pngwing.com(2).png" alt="paypal" class="icon2"></a>
+            <a href="" target="_blank">
+            <img src="Images/pngwing.com(3).png" alt="Safe payment gate way" class="icon2">
         </a>
     </div>
         <p>© 2024 ABC Cinema. All Rights Reserved.</p>
