@@ -119,9 +119,9 @@
                         </div>
                         
                          <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/landscape-poster-4_orig.jpg" class="card-img-top" alt="Movie 4">
+                            <img src="Images/silence_of_the_lambs_0.jpg" class="card-img-top" alt="Movie 4">
                             <div class="card-body">
-                                <h5 class="card-title">Ram-Leela</h5>
+                                <h5 class="card-title">Silence of the lambs</h5>
                                 <p class="card-text">Ram and Leela love each other but cannot stay together as their families, Rajadi and Sanera, have been at war with each other for the past 500 years. 
                                     In the end, they both need to make a sacrifice.</p>
                                 <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
@@ -157,7 +157,29 @@
                         </div>
                     </div>
                 </div>
-           
+                <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
+                            <img src="Images/all_about_eve_0-1.jpg" class="card-img-top" alt="Movie 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Sardaar Gabbar Singh</h5>
+                                <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
+                                    They find respite when Gabbar Singh, a brave policeman, takes on their oppressor.</p>
+                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
+                                <img src="Images/apocalypse_now_0.jpg" class="card-img-top" alt="Movie 6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sardaar Gabbar Singh</h5>
+                                    <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
+                                        They find respite when Gabbar Singh, a brave policeman, takes on their oppressor.</p>
+                                    <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#cardCarouselid2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
