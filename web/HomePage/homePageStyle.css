@@ -173,7 +173,7 @@ footer  a:hover{
     border-color:#000000;
     margin:0;
     width: 20rem;
-     
+    min-height: 300px;
    
 }
 
@@ -194,8 +194,15 @@ footer  a:hover{
     
 }
 
+.card-img-custom {
+    width: 100%; /* Ensure it spans the card width */
+    height: 430px; /* Set a fixed height */
+    object-fit: fill; /* Crop the image proportionally */
+    border-radius: 5px; /* Optional: Adds smooth corners */
+}
+
 .card-bg-orange {
-   background-color: rgba(255, 165, 0, 0.8);
+   background-color: darkolivegreen;
     color: white; /* Text color */
 
 }
