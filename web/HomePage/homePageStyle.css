@@ -150,7 +150,7 @@ footer  a:hover{
     background-color:  #000000; 
     color:white;
     border-color: #000000;
-    padding: 20px;
+    padding: 10px;
    
   
 }
@@ -170,9 +170,9 @@ footer  a:hover{
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
-     border-color:#000000;
+    border-color:#000000;
     margin:0;
-     width: 40rem;
+    width: 20rem;
      
    
 }
@@ -195,7 +195,7 @@ footer  a:hover{
 }
 
 .card-bg-orange {
-    background-color: darkslategrey; 
+   background-color: rgba(255, 165, 0, 0.8);
     color: white; /* Text color */
 
 }
@@ -208,15 +208,10 @@ footer  a:hover{
 .card-bg-yellow {
     background-color: #333; 
     color: white;
-}
-
-.card-bodyv{
-   
-   height:300px;
-   
- 
-   
-  
-   
+}   
     
+.card-bodyv{
+    height:300px;
+    width:300px;
+    text-align: center; 
 }
