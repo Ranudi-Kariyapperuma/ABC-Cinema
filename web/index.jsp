@@ -10,8 +10,8 @@
     <head>
         <link rel="icon" type="image/favicon-icon" href="favicon.png">
         <!--CDN link bootstrap!-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
          
@@ -22,10 +22,11 @@
          
          </head>
     <body>
+  <div class="container-fluid">    
       <div class="content-wrapper">
         <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
-                     <div class="container-fluid">
+                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+         
                          <h1>ABC CINEMA</h1><br>
                   <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
@@ -37,11 +38,11 @@
                        <li><a href="adminLogin.jsp">Login</a></li>
                        </ul>
                   </div>
-                 </div>
+                
                 </nav>
-    </header>
-    <main>
-        <br>
+        </header>
+        <main>
+            <br>
         
          <!-- Carousel -->
         <div id="carouselid" class="carousel slide" data-bs-ride="carousel">
@@ -171,39 +172,45 @@
             <br>
            
             
-     <!-- Vertical card set -->     
+     <!-- Horizontal card set -->     
     <div class="container my-5">  
-     
+      <div class="row">
         <!-- Card 1 -->
-    <div class="card mb-4 card-bg-orange">
-        
-        <div class="card-bodyv">
-            <h1 class="card-title1">C1</h1>
-            <p class="card-text">An epic journey awaits. Don't miss it!</p>
-            <a href="booking.jsp" class="btn btn-primary">Showtime details</a>
-        </div>
-    </div>
+        <div class="col-md-4">
+            <div class="card mb-4 card-bg-orange">
+                 <div class="card-bodyv">
+                 <h1 class="card-title1">C1</h1>
+                 <p class="card-text">An epic journey awaits. Don't miss it!</p>
+                 <a href="booking.jsp" class="btn btn-primary">Showtime details</a>
+             </div>
+            </div>
+       </div>
+    
 
         <!-- Card 2 -->
+         <div class="col-md-4">
         <div class="card mb-4 card-bg-red">
-            
-            <div class="card-bodyv">
+             <div class="card-bodyv">
                 <h1 class="card-title1">C2</h1>
                 <p class="card-text">Experience the thrill and drama.</p>
                 <a href="booking.jsp" class="btn btn-primary">Showtime details</a>
             </div>
-        </div>
+           </div>
+          </div>
+        
 
         <!-- Card 3 -->
+        <div class="col-md-4">
             <div class="card mb-4 card-bg-yellow">
-                
-                <div class="card-bodyv">
+               <div class="card-bodyv">
                     <h1 class="card-title1">C3</h1>
                     <p class="card-text">Perfect for the entire family!</p>
                     <a href="booking.jsp" class="btn btn-primary">Showtime Details</a>
-                </div>
-            </div>
-      
+                   </div>
+                 </div>
+              </div>
+           
+        </div>
     </div>
     
      
@@ -217,7 +224,8 @@
         
     </main>
         
-</div> 
+    </div> 
+ </div>        
         
     <footer>
         <div class="footer-icons">
@@ -240,12 +248,14 @@
                 <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
                 <a href="tm.jsp">Terms and Conditions</a>&ensp; &ensp; 
             </p>
-    </footer>
+          
+    </footer>       
         <!-- Bootstrap JS Bundle -->
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    </body>
+ 
+  </body>
 </html>
 
