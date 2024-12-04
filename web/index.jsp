@@ -27,7 +27,7 @@
         <header>
                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
          
-                         <h1>ABC CINEMA</h1><br>
+                         <h1 style="margin-left: 10px;">ABC CINEMA</h1><br>
                   <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                        <li><a href="index.jsp">Home</a></li>
