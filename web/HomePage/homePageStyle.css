@@ -196,7 +196,7 @@ footer  a:hover{
 
 .card-img-custom {
     width: 100%; /* Ensure it spans the card width */
-    height: 400px; /* Set a fixed height */
+    height: 430px; /* Set a fixed height */
     object-fit: fill; /* Crop the image proportionally */
     border-radius: 5px; /* Optional: Adds smooth corners */
 }
