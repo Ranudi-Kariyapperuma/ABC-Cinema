@@ -5,442 +5,222 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" type="image/favicon-icon" href="favicon.png">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Feedback</title>
-   
-        <style>
-           html,body 
-            {
-                font-family:Arial, sans-serif;
-                color:white;
-                margin: 0;
-                padding: 0;
-                background-color:  #000000; /*#f4f4f4*/
-                height:100%;
-                display: flex;
-                flex-direction: column;  
-               
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - ABC Cinema</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        .container {
+            background: #222;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background: #444;
+            color: #fff;
+            border: 1px solid #555;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .form-control::placeholder {
+            color: #bbb;
+        }
+
+        .form-control:focus {
+            background: #555;
+            border-color: yellow;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        .btn-submit {
+            background-color: yellow;
+            color: black;
+            border: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: lightgoldenrodyellow;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: yellow;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .footer-icons img {
+            width: 24px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.3) rotate(10deg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            
-            content-wrapper 
-            {
-                flex: 1; 
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
+        }
 
-            header 
-            {
-                background: #333;
-                color: white;
-                padding: 10px ;
-                text-align: center;
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
             }
-
-            .custom-navbar 
-            {
-                position: absolute; /* Makes the navbar float */
-                top: 0; /* Ensures it stays at the top */
-                width: 100%; /* Stretches across the width of the viewport */
-                z-index: 1030; /* Keeps it above other elements */
-                opacity: 0.9; /* Reduces opacity for a slightly transparent look */
-                transition: opacity 0.3s ease-in-out; /* Adds a smooth opacity change effect */
-            }
-
-            nav ul 
-            {
-                list-style: none;
-                padding: 0;
-            }
-
-            nav ul li 
-            {
-                display: inline;
-                margin: 0 15px;
-            }
-
-            nav ul li a 
-            {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            
-            nav ul li a:hover 
-            {
-                color:yellow;
-            }
-
-
-            footer 
-            {
-                background: #333;
-                color: white;
-                text-align: center;
-                padding: 5px ;
-                position:relative;
-                bottom: 0;
-                width: 100%;
-            }
-
-            footer  a
-            {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
-
-            footer  a:hover
-            {
-                color: yellow; 
-            }
-
-            /*Left bottom footer icon*/
-
-            .footer-icons 
-            {
-                position: absolute; 
-                bottom: 20px; /* Distance from the bottom of the footer */
-                left: 40px; /* Distance from the left side */
-                display: flex; 
-                gap: 10px; 
-            }
-
-            .footer-icons .icon 
-            {
-                width: 24px; 
-                height: 24px; 
-                cursor: pointer; 
-                transition: transform 0.3s ease-in-out; 
-            }
-
-            .footer-icons .icon:hover 
-            {
-                transform: scale(1.2); 
-            }
-
-            /*Right Bottom footer Icon*/
-
-            .footer-icons2 
-            {
-                position: absolute; 
-                bottom: 20px; /* Distance from the bottom of the footer */
-                right: 40px; /* Distance from the left side */
-                display: flex; 
-                gap: 10px; 
-            }
-
-            .footer-icons2 .icon2 
-            {
-                width: 60px; 
-                height: 90px; 
-                cursor: pointer; 
-                transition: transform 0.3s ease-in-out; 
-                bottom: 20px; /* Distance from the bottom of the footer */
-                left: 20px; 
-            }
-
-            .footer-icons2 .icon2:hover 
-            {
-                transform: scale(1.2);
-            }
-
-            /*.footer-icons .icon2
-            {
-                width: 50px; 
-                height: 24px; 
-                cursor: pointer; 
-                transition: transform 0.3s ease-in-out;
-            }*/
-
-            .body 
-            {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: black;
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                padding-top: 50px;
-            }
-
-            .container 
-            {
-                background-color: gainsboro;
-                padding: 20px 30px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                width: 400px;
-                text-align: center;    
-                color: #333;
-            }
-
-            h1 
-            {
-                color: #444;
-                margin-bottom: 20px;
-            }
-
-            .form-group 
-            {
-                margin-bottom: 15px;
-                text-align: left;
-            }
-
-            label 
-            {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: bold;
-            }
-
-            input, select, textarea, button 
-            {
-                width: 100%;
-                padding: 10px;
-                font-size: 14px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-
-            button.submit-btn 
-            {
-                background-color: yellow;
-                color: black;
-                font-size: 16px;
-                cursor: pointer;
-                border: none;
-                transition: background 0.3s;
-            }
-
-            button.submit-btn:hover 
-            {
-                background-color: lightgoldenrodyellow;
-            }
-
-
-            @media (max-width: 991px) 
-            {
-                .container 
-                {
-                    width: 90%;
-                    padding: 15px 20px;
-                }
-
-                h1 
-                {
-                    font-size: 24px;
-                }
-
-                button.submit-btn 
-                {
-                    font-size: 14px;
-                }
-            }
-
-
-            @media (max-width: 768px) 
-            {
-                .container 
-                {
-                    width: 100%;
-                    margin: 10px;
-                    box-shadow: none;
-                    border-radius: 0;
-                }
-
-                h1 
-                {
-                    font-size: 20px;
-                }
-
-                input, select, textarea, button 
-                {
-                    font-size: 13px;
-                    padding: 8px;
-                }
-            }
-
-
-            @media (max-width: 450px) 
-            {
-                h1 
-                {
-                    font-size: 18px;
-                }
-
-                p
-                {
-                    font-size: 14px;
-                }
-
-                input, select, textarea, button 
-                {
-                    font-size: 12px;
-                }
-
-                .container 
-                {
-                    padding: 10px;
-                    width: 100%;
-                }
-            }
-
-        </style>
-    
-    </head>
-     
-    <body>
-    <div class="content-wrapper">
-            <header>
-                
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
-                    <div class="container-fluid">
-                        <h1 style="color: white;">ABC CINEMA</h1>
-                        
-                        <br>
-                        
-                        <ul>
-                            <li>
-                                <a href="index.jsp">Home</a>
-                            </li>
-                            <li>
-                                <a href="movie.jsp">Movies</a>
-                            </li>
-                            <li>
-                                <a href="booking.jsp">Book Tickets</a>
-                            </li>
-                            <li>
-                                <a href="feedback.jsp">Feedback</a>
-                            </li>
-                            <li>
-                                <a href="contact.jsp">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="adminLogin.jsp">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header> 
-            
-            <br><br>
-            <div class="body">
-        <div class="container">
-            <h1>We Value Your Feedback!</h1>
-        
-            <p>Please share your feedback about your experience at Our ABC Cinema.</p>
-        
-            <form id="feedbackForm" action="SubmitFeedback" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="rating">Rating:</label>
-                    <select id="rating" name="rating" required>
-                        <option value="" disabled selected> Select a rating </option>
-                        <option value="5">Excellent</option>
-                        <option value="4">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="2">Fair</option>
-                        <option value="1">Poor</option>
-                    </select>
-                </div>
-            
-                <div class="form-group">
-                    <label for="comments">Comments:</label>
-                        <textarea id="comments" name="comments" rows="4" placeholder="Share your feedback here..."></textarea>
-                </div>
-            
-                <div class="form-group">
-                    <button type="submit" class="submit-btn">Submit Feedback</button>
-                </div>
-            </form>
-        </div>
-     </div>
-  </div>
-
-    <footer>
-            
-            <div class="footer-icons">
-                <a href="https://instagram.com" target="_blank">
-                    <img src="Images/icon1.png" alt="Instagram" class="icon">
-                </a>
-                <a href="https://facebook.com" target="_blank">
-                    <img src="Images/icon2.png" alt="Twitter" class="icon">
-                </a>
-                <a href="" target="_blank">
-                    <img src="Images/icon3.png" alt="Instagram" class="icon">
-                </a>
-            </div> 
-            <div class="footer-icons2">
-                <a href="" target="_blank">
-                    <img src="Images/pngwing.com(2).png" alt="paypal" class="icon2"></a>
-                <a href="" target="_blank">
-                    <img src="Images/pngwing.com(3).png" alt="Safe payment gate way" class="icon2">
-                </a>
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ABC CINEMA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="movie.jsp">Movies</a></li>
+                <li><a href="booking.jsp">Book Tickets</a></li>
+                <li><a href="feedback.jsp">Feedback</a></li>
+                <li><a href="contact.jsp">Contact Us</a></li>
+                <li><a href="adminLogin.jsp">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>We Value Your Feedback!</h1>
+        <p>Share your experience at ABC Cinema.</p>
+        <form id="feedbackForm" action="SubmitFeedback" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
-            
-            <p>© 2024 ABC Cinema. All Rights Reserved.</p>
-            <p>      
-                <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
-                <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
-                <a href="tm.jsp">Terms and Conditions</a>&ensp; &ensp; 
-            </p>
-        </footer>
-                    
-        <!-- Bootstrap JS Bundle -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
- 
-    
-        <script>
-            document.getElementById('feedbackForm').addEventListener('submit', function (e) 
-            {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const rating = document.getElementById('rating').value;
-
-                if (!name || !email || !rating) 
-                {
-                    e.preventDefault();
-                    alert('Please fill in all required fields.');
-                    return false;
-                }
-
-                if (!validateEmail(email)) 
-                {
-                    e.preventDefault();
-                    alert('Please enter a valid email address.');
-                    return false;
-                }
-
-                alert('Thank you for your feedback!');
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <select class="form-select form-control" id="rating" name="rating" required>
+                    <option value="" disabled selected>Select a rating</option>
+                    <option value="5">Excellent</option>
+                    <option value="4">Very Good</option>
+                    <option value="3">Good</option>
+                    <option value="2">Fair</option>
+                    <option value="1">Poor</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="4" placeholder="Share your feedback"></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit w-100">Submit Feedback</button>
+        </form>
+    </main>
+    <footer>
+        
+        <p>© 2024 ABC Cinema. All Rights Reserved.</p>
+        <p>
+            <a href="pr.jsp">Privacy Policy</a> |
+            <a href="contact.jsp">Contact Us</a> |
+            <a href="tm.jsp">Terms and Conditions</a>
+        </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            const email = document.getElementById('email').value;
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
             }
-            );
-
-            function validateEmail(email) 
-            {
-                const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-                return re.test(String(email).toLowerCase());
-            }
-
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
-
-
