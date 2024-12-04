@@ -89,7 +89,7 @@
                     <div class="d-flex justify-content-center">
                         
                         <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/png1.jpg" class="card-img-top" alt="Movie 1">
+                            <img src="Images/png1.jpg" class="card-img-top card-img-custom" alt="Movie 1">
                             <div class="card-body">
                                 <h5 class="card-title">The Queen's Gambit</h5>
                                 <p class="card-text">Set during the Cold War era, 
@@ -99,7 +99,7 @@
                         </div>
                         
                         <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/png2.jpg" class="card-img-top" alt="Movie 2">
+                            <img src="Images/png2.jpg" class="card-img-top card-img-custom" alt="Movie 2">
                             <div class="card-body">
                                 <h5 class="card-title">Shrew's Nest</h5>
                                 <p class="card-text">Montse, an agoraphobic woman, prefers to stay inside her apartment all the time. 
@@ -109,7 +109,7 @@
                         </div>
                         
                         <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/png3.jpg" class="card-img-top" alt="Movie 3">
+                            <img src="Images/png3.jpg" class="card-img-top card-img-custom" alt="Movie 3">
                             <div class="card-body">
                                 <h5 class="card-title">Manikarnika</h5>
                                 <p class="card-text">Manikarnika, the wife of the king of Jhansi, refuses to bow down when the East India Company tries to annex the kingdom.
@@ -119,11 +119,10 @@
                         </div>
                         
                          <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/silence_of_the_lambs_0.jpg" class="card-img-top" alt="Movie 4">
+                            <img src="Images/silence_of_the_lambs_0.jpg" class="card-img-top card-img-custom" alt="Movie 4">
                             <div class="card-body">
                                 <h5 class="card-title">Silence of the lambs</h5>
-                                <p class="card-text">Ram and Leela love each other but cannot stay together as their families, Rajadi and Sanera, have been at war with each other for the past 500 years. 
-                                    In the end, they both need to make a sacrifice.</p>
+                                <p class="card-text">Clarice Starling, an FBI trainee, seeks help from Hannibal Lecter, a psychopathic serial killer and former psychiatrist, in order to apprehend another murderer who has been claiming female victims.</p>
                                 <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
@@ -137,7 +136,7 @@
                     <div class="d-flex justify-content-center">
                        
                         <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/png5.jpg" class="card-img-top" alt="Movie 5">
+                            <img src="Images/png5.jpg" class="card-img-top card-img-custom" alt="Movie 5">
                             <div class="card-body">
                                 <h5 class="card-title">Bhoot</h5>
                                 <p class="card-text">Vishal and Swati, his wife, move into a highrise apartment where she gets possessed by a vengeful spirit. 
@@ -147,7 +146,7 @@
                         </div>
                         
                         <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/png6.jpg" class="card-img-top" alt="Movie 6">
+                            <img src="Images/png6.jpg" class="card-img-top card-img-custom" alt="Movie 6">
                             <div class="card-body">
                                 <h5 class="card-title">Sardaar Gabbar Singh</h5>
                                 <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
@@ -158,22 +157,20 @@
                     
                 
                 <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                            <img src="Images/all_about_eve_0-1.jpg" class="card-img-top" alt="Movie 6">
+                            <img src="Images/all_about_eve_0-1.jpg" class="card-img-top card-img-custom" alt="Movie 6">
                             <div class="card-body">
-                                <h5 class="card-title">Sardaar Gabbar Singh</h5>
-                                <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
-                                    They find respite when Gabbar Singh, a brave policeman, takes on their oppressor.</p>
+                                <h5 class="card-title">All about eve</h5>
+                                <p class="card-text">Margo, an established theatre actress, appoints Eve, an aspiring actress, as her personal assistant. However, Margo is unaware of Eve's intention to take over her career</p>
                                 <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                    
               
                 <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
-                                <img src="Images/apocalypse_now_0.jpg" class="card-img-top" alt="Movie 6">
+                                <img src="Images/apocalypse_now_0.jpg" class="card-img-top card-img-custom" alt="Movie 6">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sardaar Gabbar Singh</h5>
-                                    <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
-                                        They find respite when Gabbar Singh, a brave policeman, takes on their oppressor.</p>
+                                    <h5 class="card-title">Apocalypse Now</h5>
+                                    <p class="card-text">A US Army officer serving in Vietnam is asked to kill a rogue colonel who has established himself as a god among the tribals in Cambodia.</p>
                                     <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                                 </div>
                             </div>
