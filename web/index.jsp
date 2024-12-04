@@ -155,8 +155,8 @@
                                 <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    
+                
                 <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
                             <img src="Images/all_about_eve_0-1.jpg" class="card-img-top" alt="Movie 6">
                             <div class="card-body">
@@ -166,8 +166,8 @@
                                 <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                   
+              
                 <div class="card mx-2 d-flex flex-column" style="width: 18rem;">
                                 <img src="Images/apocalypse_now_0.jpg" class="card-img-top" alt="Movie 6">
                                 <div class="card-body">
@@ -177,9 +177,10 @@
                                     <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                                 </div>
                             </div>
-                        </div>
                     </div>
-
+                </div>
+           
+                     
                     <button class="carousel-control-prev" type="button" data-bs-target="#cardCarouselid2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
