@@ -135,14 +135,14 @@
 </div>
 
            
-  
     <footer>
         <p>© 2024 ABC Cinema. All Rights Reserved.</p>
-        <p>      <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
+        <p>     <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
                 <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
                 <a href="tm.jsp">Terms and Conditions</a>&ensp; &ensp; 
-            </p>
+        </p>
     </footer>
+          
         <!-- Bootstrap JS Bundle -->
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
