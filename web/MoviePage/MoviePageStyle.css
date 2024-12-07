@@ -58,23 +58,24 @@ nav ul li a:hover {
     color:yellow;
 }
 
-
 footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 5px ;
+    position:relative;
     bottom: 0;
     width: 100%;
     
 }
-
-footer  a{
+footer a{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    
+}
+
+footer p a:hover{
+    color: yellow
 }
 
 /* Movie Section Styling */
