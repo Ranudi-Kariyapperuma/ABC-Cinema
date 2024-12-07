@@ -45,7 +45,7 @@
             <br>
         
          <!-- Carousel -->
-        <div id="carouselid" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselid" class="carousel slide fade-in" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="movieDetails.jsp">
@@ -81,7 +81,7 @@
          <h2>Now Showing</h2>
    
             <!-- Card Slider -->
-        <div id="cardCarouselid2" class="carousel slide" data-bs-ride="carousel">
+        <div id="cardCarouselid2" class="carousel slide fade-in" data-bs-ride="carousel">
             <div class="carousel-inner">
                
                 <!-- Slide 1 -->
@@ -196,11 +196,14 @@
     <div class="container my-5">  
       <div class="row">
         <!-- Card 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4 fade-in">
             <div class="card mb-4 card-bg-orange">
+                <img src="Images/pngwing.com(5).png" alt="Icon 1" class="card-img-top mx-auto mt-3" style="width: 300px; height: 200px;">
                  <div class="card-bodyv">
                  <h1 class="card-title1">C1</h1>
-                 <p class="card-text">An epic journey awaits. Don't miss it!</p>
+                 <ul class="card-text"><li>4K Digital Projection</li>
+                     <li>Dolby 7.1 Sounds</li>
+                 </ul>
                  <a href="booking.jsp" class="btn btn-primary">Showtime details</a>
              </div>
             </div>
@@ -208,11 +211,14 @@
     
 
         <!-- Card 2 -->
-         <div class="col-md-4">
+       <div class="col-md-4 fade-in">
         <div class="card mb-4 card-bg-red">
+            <img src="Images/pngwing.com(6).png" alt="Icon 1" class="card-img-top mx-auto mt-3" style="width: 300px; height: 200px;">
              <div class="card-bodyv">
                 <h1 class="card-title1">C2</h1>
-                <p class="card-text">Experience the thrill and drama.</p>
+               <ul class="card-text"><li>2K Laser Projection</li>
+                   <li>Dolby Atmos</li>
+                 </ul>
                 <a href="booking.jsp" class="btn btn-primary">Showtime details</a>
             </div>
            </div>
@@ -220,11 +226,14 @@
         
 
         <!-- Card 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4 fade-in">
             <div class="card mb-4 card-bg-yellow">
+                <img src="Images/pngwing.com(7).png" alt="Icon 1" class="card-img-top mx-auto mt-3" style="width: 300px; height: 200px;">
                <div class="card-bodyv">
                     <h1 class="card-title1">C3</h1>
-                    <p class="card-text">Perfect for the entire family!</p>
+                    <ul class="card-text"><li>4K Laser Projection</li>
+                        <li>Dolby 7.1 Sounds</li>
+                 </ul>
                     <a href="booking.jsp" class="btn btn-primary">Showtime Details</a>
                    </div>
                  </div>
@@ -276,6 +285,28 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
  
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 10% of the element is visible
+            }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+    });
+</script>
+
+
   </body>
 </html>
 
