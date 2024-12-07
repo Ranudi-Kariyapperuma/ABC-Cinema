@@ -156,15 +156,16 @@ footer  a:hover{
 }
 
 .btn-primary{
-    background-color:yellow;
+    background-color: #ffc107;
     opacity: 0.8;
     color:#000000;
-    border-radius: 0px;
+    border-radius: 10px;
    
 }
 
 .btn-primary a:hover{
     color:white;
+    background-color: transparent;
 }
 
 .card {
@@ -174,6 +175,12 @@ footer  a:hover{
     margin:0;
     width: 20rem;
     min-height: 300px;
+    overflow: hidden; 
+    display:flex;
+    flex-direction: column; /* Ensures vertical stacking of content */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
    
 }
 
@@ -186,12 +193,20 @@ footer  a:hover{
 }
 .card-body {
     text-align: center; 
-    
+    box-sizing: border-box;
+    flex:1;
 }
 
 .card-title1{
-    text-align: right;
+    text-align: center;
     
+}
+
+.card-text {
+    white-space: normal; /* Prevent text from overflowing in one line */
+    word-wrap: break-word; /* Break long words if necessary */
+    text-align:center;
+    text-height:50px;
 }
 
 .card-img-custom {
@@ -221,4 +236,15 @@ footer  a:hover{
     height:300px;
     width:400px;
     text-align: center; 
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
