@@ -99,6 +99,7 @@
         .btn-submit:hover {
             background-color: lightgoldenrodyellow;
             transform: scale(1.05);
+             color:black;
         }
 
         footer {
