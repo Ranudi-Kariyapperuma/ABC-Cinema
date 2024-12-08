@@ -662,7 +662,7 @@
     </div>
 
     <footer>
-            
+            <!--
             <div class="footer-icons">
                 <a href="https://instagram.com" target="_blank">
                     <img src="Images/icon1.png" alt="Instagram" class="icon">
@@ -681,7 +681,7 @@
                     <img src="Images/pngwing.com(3).png" alt="Safe payment gate way" class="icon2">
                 </a>
             </div>
-            
+            -->
             <p>© 2024 ABC Cinema. All Rights Reserved.</p>
             <p>      
                 <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
