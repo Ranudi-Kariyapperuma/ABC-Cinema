@@ -4,8 +4,16 @@
         <servlet-name>homePageServlet</servlet-name>
         <servlet-class>homePageServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EmailNotification</servlet-name>
+        <servlet-class>EmailNotification</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>homePageServlet</servlet-name>
         <url-pattern>/homePageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmailNotification</servlet-name>
+        <url-pattern>/EmailNotification</url-pattern>
     </servlet-mapping>
 </web-app>
