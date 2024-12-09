@@ -124,8 +124,6 @@ footer  a:hover{
     left: 20px; 
 }
 
-
-
 /*.footer-icons .icon2{
     width: 50px; 
     height: 24px; 
@@ -151,21 +149,31 @@ footer  a:hover{
     color:white;
     border-color: #000000;
     padding: 10px;
-   
-  
-}
+ }
 
-.btn-primary{
-    background-color: #ffc107;
+.container btn-primary{
+            background-color: #ffeb3b; 
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.3s, box-shadow 0.3s;
+    
+    /*background-color: #ffc107;
     opacity: 0.8;
     color:#000000;
-    border-radius: 10px;
+    border-radius: 10px;*/
    
 }
 
-.btn-primary a:hover{
-    color:white;
-    background-color: transparent;
+.container btn-primary a:hover{
+     transform: translateY(-3px);
+     box-shadow: 0 5px 10px rgba(255, 235, 59, 0.5);
+    
+    /* color:white;
+    background-color: transparent; */
 }
 
 .card {
@@ -177,16 +185,15 @@ footer  a:hover{
     min-height: 300px;
     overflow: hidden; 
     display:flex;
-    flex-direction: column; /* Ensures vertical stacking of content */
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-   
 }
 
 .card:hover {
-    transform: scale(1.05); /* Scale the card slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     border: 2px solid rgba(255, 255, 255, 0.8);
    border-color:yellow;
     margin:0;
@@ -203,28 +210,28 @@ footer  a:hover{
 }
 
 .card-text {
-    white-space: normal; /* Prevent text from overflowing in one line */
-    word-wrap: break-word; /* Break long words if necessary */
+    white-space: normal; 
+    word-wrap: break-word; 
     text-align:center;
-    text-height:50px;
+    
 }
 
 .card-img-custom {
-    width: 100%; /* Ensure it spans the card width */
-    height: 430px; /* Set a fixed height */
-    object-fit: fill; /* Crop the image proportionally */
-    border-radius: 5px; /* Optional: Adds smooth corners */
+    width: 100%; 
+    height: 430px; 
+    object-fit: fill; 
+    border-radius: 5px; 
 }
 
 .card-bg-orange {
    background-color: darkolivegreen;
-    color: white; /* Text color */
+    color: white;
 
 }
 
 .card-bg-red {
     background-color: #444; 
-    color: white; /* Text color */
+    color: white;
 }
 
 .card-bg-yellow {
@@ -240,7 +247,7 @@ footer  a:hover{
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
     transition: all 0.6s ease-in-out;
 }
 
