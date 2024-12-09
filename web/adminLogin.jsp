@@ -1,17 +1,20 @@
 <%-- 
     Document   : adminLogin
-    Created on : Dec 2, 2024, 12:05:06 AM
+    Created on : Dec 2, 2024, 12:05:06 AM
     Author     : DELL
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.logging.*" %>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="icon" type="image/favicon-icon" href="favicon.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ABC CINEMA Admin Login</title>
-     </head>
+    </head>
     <style>
         body {
             display: flex;
@@ -29,6 +32,7 @@
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
         .profile-circle {
             background-image: url('Images/profile1.jpeg');
@@ -39,6 +43,18 @@
             margin: 0 auto;
             background-size: cover;
             background-position: center;
+            cursor: pointer;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .toggle-container label {
+            font-size: 16px;
+            color: white;
+            margin: 0 10px;
         }
         .button {
             display: block;
@@ -55,77 +71,246 @@
             background-color: yellow;
             color: black;
         }
-        .button:active {
-            background-color: yellow;
-            color: black;
-        }
         .input-field {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
         .checkbox {
             margin: 10px 0;
+            color: white;
+            text-align: left;
         }
         .error {
             color: red;
-            display: none;
+            margin: 10px 0;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="profile-circle"></div>
-        <button class="button" id="userButton">USER</button>
-        <button class="button" id="adminButton">ADMIN</button>
-        <input type="text" id="username" class="input-field" placeholder="USERNAME">
-        <input type="password" id="password" class="input-field" placeholder="PASSWORD">
-        <div class="checkbox">
-            <input type="checkbox" id="keepSignedIn"> Keep me signed in
-        </div>
-        <button class="button" id="signInButton">SIGN IN</button>
-        <div class="error" id="errorMessage">Invalid username or password</div>
-    </div>
-    <!-- Modal for selecting profile picture -->
-<div id="profileModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
-    <h3>Select Profile Picture</h3>
-    <div style="display:flex; gap:10px;">
-        <img src="Images/profile2.jpeg" class="profile-option" style="width:50px; height:50px; border-radius:50%; cursor:pointer;">
-        <img src="Images/profile3.png" class="profile-option" style="width:50px; height:50px; border-radius:50%; cursor:pointer;">
-        <!-- Add more profile options as needed -->
-    </div>
-    <button id="closeModal" style="margin-top:20px; padding:10px; border:none; background:black; color:white; cursor:pointer;">Close</button>
-</div>
+    <body>
+        <div class="container">
+            <div class="profile-circle"></div>
+            <div class="toggle-container">
+                <label>User</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="userAdminToggle">
+                    <span class="slider"></span>
+                </label>
+                <label>Admin</label>
+            </div>
+            
+            <form method="post" action="">
+                <input type="text" name="username" id="username" class="input-field" placeholder="USERNAME" required>
+                <input type="password" name="password" id="password" class="input-field" placeholder="PASSWORD" required>
+                <div class="checkbox">
+                    <input type="checkbox" name="keepSignedIn" id="keepSignedIn"> Keep me signed in
+                </div>
+                <button type="submit" class="button" id="signInButton">SIGN IN</button>
+            </form>
 
-    <script>
-        document.getElementById('signInButton').addEventListener('click', function() {
+                <button id="registerButton" class="button" style="display: none;" onclick="navigateToRegister()">Not a member yet? Register</button>
+
+            <div class="error" id="errorMessage">
+                <% 
+                    String errorMessage = (String) request.getAttribute("errorMessage");
+                    if (errorMessage != null) {
+                %>
+                    <%= errorMessage %>
+                <% } %>
+            </div>
+        </div>
+        
+        <div id="profileModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+            <h3>Select Profile Picture</h3>
+            <div style="display:flex; gap:10px;">
+                <img src="Images/profile2.jpeg" class="profile-option" style="width:50px; height:50px; border-radius:50%; cursor:pointer;">
+                <img src="Images/profile3.png" class="profile-option" style="width:50px; height:50px; border-radius:50%; cursor:pointer;">
+            </div>
+            <button id="closeModal" style="margin-top:20px; padding:10px; border:none; background:black; color:white; cursor:pointer;">Close</button>
+        </div>
+
+        <script>
+            document.getElementById('signInButton').addEventListener('click', function(event) {
+            console.log('Sign In button clicked');
+
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             var errorMessage = document.getElementById('errorMessage');
+            var isAdmin = document.getElementById('userAdminToggle').checked;
 
-            if (username === 'admin' && password === '1234') {
+            console.log('Username entered:', username);
+            console.log('Password entered:', password);
+            console.log('Is Admin:', isAdmin);
+
+            if ((isAdmin && username === 'admin' && password === '1234') ||
+                (!isAdmin && username === 'user' && password === 'user123')) {
+                console.log('Credentials validated successfully. Redirecting...');
                 window.location.href = 'helloWorld.html';
-            } else {
-                errorMessage.style.display = 'block';
+                return;
             }
+
+            console.log('Invalid credentials');
+            errorMessage.textContent = 'Invalid username or password';
+            event.preventDefault();
         });
+
         document.querySelector('.profile-circle').addEventListener('click', function() {
-        document.getElementById('profileModal').style.display = 'block';
-    });
+            console.log('Profile picture clicked');
+            document.getElementById('profileModal').style.display = 'block';
+        });
 
-    document.getElementById('closeModal').addEventListener('click', function() {
-        document.getElementById('profileModal').style.display = 'none';
-    });
-
-    document.querySelectorAll('.profile-option').forEach(function(img) {
-        img.addEventListener('click', function() {
-            document.querySelector('.profile-circle').style.backgroundImage = 'url(' + this.src + ')';
+        document.getElementById('closeModal').addEventListener('click', function() {
+            console.log('Closing profile modal');
             document.getElementById('profileModal').style.display = 'none';
         });
-    });
-    </script>
-</body>
 
+        document.querySelectorAll('.profile-option').forEach(function(img) {
+            img.addEventListener('click', function() {
+                console.log('Profile picture option selected:', this.src);
+                document.querySelector('.profile-circle').style.backgroundImage = 'url(' + this.src + ')';
+                document.getElementById('profileModal').style.display = 'none';
+            });
+        });
+        
+        const toggle = document.getElementById('userAdminToggle');
+        const registerButton = document.getElementById('registerButton');
+
+        toggle.addEventListener('change', function () {
+            if (toggle.checked) {
+                registerButton.style.display = 'none';
+            } else {
+                registerButton.style.display = 'block';
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            registerButton.style.display = toggle.checked ? 'none' : 'block';
+        });
+        
+        function navigateToRegister() {
+            window.location.href = 'register.jsp'; 
+        }
+        </script>
+        
+         <%!
+            private static final Logger LOGGER = Logger.getLogger("AdminLoginLogger");
+        %>
+
+        <%
+            Handler consoleHandler = new ConsoleHandler();
+            consoleHandler.setLevel(Level.ALL);
+            LOGGER.addHandler(consoleHandler);
+            LOGGER.setLevel(Level.ALL);
+
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            LOGGER.info("Login attempt started");
+
+            if (username != null && password != null) {
+                LOGGER.info("Username and password received");
+                
+                String dbURL = "jdbc:mysql://localhost:3306/ABC_Cinema"; 
+                String dbUser = "root"; 
+                String dbPassword = "admin"; 
+
+                Connection conn = null;
+                PreparedStatement stmt = null;
+                ResultSet rs = null;
+
+                try {
+                    LOGGER.info("Attempting to load JDBC driver");
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    LOGGER.info("JDBC driver loaded successfully");
+
+                    LOGGER.info("Attempting to establish database connection");
+                    conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+                    LOGGER.info("Database connection established successfully");
+
+                    String sql = "SELECT * FROM admins WHERE admin_username = ? AND admin_pw = ?";
+                    LOGGER.info("Preparing SQL statement: " + sql);
+
+                    stmt = conn.prepareStatement(sql);
+                    stmt.setString(1, username);
+                    stmt.setString(2, password);
+
+                    LOGGER.info("Executing query for username: " + username);
+                    rs = stmt.executeQuery();
+
+                    if (rs.next()) {
+                        LOGGER.info("Login successful for user: " + username);
+                        response.sendRedirect("dashboard.jsp"); 
+                    } else {
+                        LOGGER.warning("Login failed for username: " + username);
+                        request.setAttribute("errorMessage", "Invalid username or password\n\nDebug Info:\n- Attempted Username: " + username);
+                        request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
+                    }
+                } catch (ClassNotFoundException e) {
+                    LOGGER.severe("JDBC Driver not found: " + e.getMessage());
+                    request.setAttribute("errorMessage", "Database driver error\n\nError: " + e.getMessage());
+                    request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
+                } catch (SQLException e) {
+                    LOGGER.severe("Database connection or query error: " + e.getMessage());
+                    request.setAttribute("errorMessage", "Database connection error\n\nError: " + e.getMessage());
+                    request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
+                } catch (Exception e) {
+                    LOGGER.severe("Unexpected error: " + e.getMessage());
+                    request.setAttribute("errorMessage", "Unexpected error occurred\n\nError: " + e.getMessage());
+                    request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
+                } finally {
+                    try {
+                        LOGGER.info("Closing database resources");
+                        if (rs != null) rs.close();
+                        if (stmt != null) stmt.close();
+                        if (conn != null) conn.close();
+                        LOGGER.info("Database resources closed successfully");
+                    } catch (Exception e) {
+                        LOGGER.severe("Error closing database resources: " + e.getMessage());
+                    }
+                }
+            } else {
+                LOGGER.warning("Login attempt with null username or password");
+            }
+        %>
+    </body>
 </html>
