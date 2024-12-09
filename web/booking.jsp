@@ -368,15 +368,14 @@
                 <h3>Buy a ticket</h3>
                 <h2>
                     Movie Name
-                    <iframe frameborder="0" height="18" src="https://free.timeanddate.com/clock/i9msmh6n/n1925/ts1" style="margin-left:30px;" width="94"></iframe>
                 </h2>
                 <h3>
                     <i class="fa fa-map-marker" style="font-size:24px"></i>
-                    Location
+                    Pitipana - Thalagala Rd, Homagama.
                 </h3>
                 <h3>
                     <i class="fa fa-calendar" style="font-size:24px"></i>
-                    Date
+                    <span id="datetime"></span>
                 </h3>
                 <h2>Digital 3D</h2>
             </div>
@@ -695,6 +694,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
         
         <script>
+            // Update the date and time
+            function updateDateTime() 
+            {
+                const now = new Date();
+                const currentDateTime = now.toLocaleString();
+                document.querySelector('#datetime').textContent = currentDateTime;
+            }
+            
+            setInterval(updateDateTime, 1000);
+
             const seatPrices = 
             {
                 adult: 1800,
