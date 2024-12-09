@@ -48,20 +48,20 @@
         <div id="carouselid" class="carousel slide fade-in" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="movieDetails.jsp">
+                    <a href="movie.jsp">
                         <img src="Images/landscape-poster-1_orig.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 1"></a>
                     <div class="carousel-caption d-none d-md-block">
                         
                     </div>
                 </div>
                 <div class="carousel-item">
-                     <a href="movieDetails.jsp">
+                     <a href="movie.jsp">
                          <img src="Images/landscape-poster-2_orig.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 2"></a>
                     <div class="carousel-caption d-none d-md-block">
                                             </div>
                 </div>
                 <div class="carousel-item">
-                     <a href="movieDetails.jsp">
+                     <a href="movie.jsp">
                          <img src="Images/landscape-poster-3_orig.jpg" class="d-block w-100 custom-carousel-image" alt="Movie 3"></a>
                     <div class="carousel-caption d-none d-md-block">
                         
@@ -94,7 +94,7 @@
                                 <h5 class="card-title">The Queen's Gambit</h5>
                                 <p class="card-text">Set during the Cold War era, 
                                     orphaned chess prodigy Beth Harmon struggles with addiction in a quest to become the greatest chess player in the world.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                         
@@ -104,7 +104,7 @@
                                 <h5 class="card-title">Shrew's Nest</h5>
                                 <p class="card-text">Montse, an agoraphobic woman, prefers to stay inside her apartment all the time. 
                                     Her solitude is disturbed when she is forced to shelter their neighbour who injures himself and crawls up to her door.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                         
@@ -114,7 +114,7 @@
                                 <h5 class="card-title">Manikarnika</h5>
                                 <p class="card-text">Manikarnika, the wife of the king of Jhansi, refuses to bow down when the East India Company tries to annex the kingdom.
                                     Her rebellion soon turns into a fiery revolution against the British Raj.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                         
@@ -123,7 +123,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Silence of the lambs</h5>
                                 <p class="card-text">Clarice Starling, an FBI trainee, seeks help from Hannibal Lecter, a psychopathic serial killer and former psychiatrist, in order to apprehend another murderer who has been claiming female victims.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                         
@@ -141,7 +141,7 @@
                                 <h5 class="card-title">Bhoot</h5>
                                 <p class="card-text">Vishal and Swati, his wife, move into a highrise apartment where she gets possessed by a vengeful spirit. 
                                     However, Vishal must help rid his wife of the spirit possessing her before it is too late.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                         
@@ -151,7 +151,7 @@
                                 <h5 class="card-title">Sardaar Gabbar Singh</h5>
                                 <p class="card-text">The residents of Rathanpur are forced to face the wrath of Bhairav Singh who unceremoniously usurps their land.
                                     They find respite when Gabbar Singh, a brave policeman, takes on their oppressor.</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                     
@@ -161,7 +161,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">All about eve</h5>
                                 <p class="card-text">Margo, an established theatre actress, appoints Eve, an aspiring actress, as her personal assistant. However, Margo is unaware of Eve's intention to take over her career</p>
-                                <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                             </div>
                         </div>
                    
@@ -171,7 +171,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Apocalypse Now</h5>
                                     <p class="card-text">A US Army officer serving in Vietnam is asked to kill a rogue colonel who has established himself as a god among the tribals in Cambodia.</p>
-                                    <a href="movieDetails.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
+                                    <a href="movie.jsp" class="btn btn-primary w-100 mt-auto">Buy Tickets</a>
                                 </div>
                             </div>
                     </div>
