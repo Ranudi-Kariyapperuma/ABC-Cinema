@@ -12,6 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.paypal.com/sdk/js?client-id=AQes_iUtXuLtdYV7fYwWwa8TTIHKOdVUs-CFGErWJ-27e2hq30CO9nYiHFbr0-kuKLzyQmG4XJL5w10m&currency=USD"></script>
   <title>Payment Form</title>
   <style>
     /* Dark background with animated gradient */
@@ -152,6 +153,8 @@
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 174, 255, 0.7);
     }
+    
+    
   </style>
 </head>
 <body>
@@ -170,6 +173,7 @@
       <img id="paypal-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="width: 50px;" onclick="toggleForm('paypal')">
     </div>
     
+ 
     <div id="form-container">
       <!-- Default Credit Card Form -->
       <form id="credit-card-form">
@@ -231,27 +235,51 @@
         paypal: document.getElementById('paypal-icon')
       };
 
-      // Reset icon borders
+     
       Object.values(icons).forEach(icon => {
         icon.style.border = '1px solid #ccc';
       });
 
-      // Highlight selected icon
+     
       icons[method].style.border = '2px solid #007BFF';
 
-      if (method === 'paypal') {
-        formContainer.innerHTML = `
-          <form id="paypal-form">
-            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
-              <label for="paypal-email">PayPal Email</label>
-              <input type="email" id="paypal-email" placeholder="Your PayPal Email">
-            </div>
-            <div style="display: flex; justify-content: center; margin-top: 1rem;">
-              <button type="submit">Pay with PayPal</button>
-            </div>
-          </form>
-        `;
-      } else {
+ 
+     if (method === 'paypal') {
+  formContainer.innerHTML = `
+    <div style="max-height: 200px; overflow-y: auto; padding: 1rem; background-color: rgba(255, 255, 255, 0.05); border-radius: 8px;">
+    <div id="paypal-button-container" style="display: flex; justify-content: center; margin-top: 1rem;"></div>
+  `;
+  
+  // Render PayPal button
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '500.00' // Total price
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Payment successful! ' + details.payer.name.given_name);
+        
+      });
+    },
+    onCancel: function(data) {
+      alert('Payment canceled');
+    },
+    onError: function(err) {
+      console.error('Error during payment: ', err);
+      alert('An error occurred during payment');
+    }
+  }).render('#paypal-button-container'); 
+  
+  
+  } 
+  
+      else {
         formContainer.innerHTML = `
           <form id="credit-card-form">
             <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
@@ -303,6 +331,7 @@
         `;
       }
     }
+    
   </script>
 </body>
 </html>

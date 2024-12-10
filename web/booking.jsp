@@ -8,9 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" type="image/favicon-icon" href="favicon.png">
+       <link rel="icon" type="image/favicon-icon" href="favicon.png">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+       
+        
+        <!--CDN link bootstrap!-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <link href="WEB-INF/book.css" rel="stylesheet" type="text/css">
         
         <title>Seat Booking</title>
@@ -365,17 +370,21 @@
 
         <div class="container">
             <div class="header">
-                <h3>Buy a ticket</h3>
-                <h2>
-                    Movie Name
-                </h2>
+               <h3>Buy Now</h3>
+                <h2>Movie Name</h2>
                 <h3>
                     <i class="fa fa-map-marker" style="font-size:24px"></i>
                     Pitipana - Thalagala Rd, Homagama.
                 </h3>
                 <h3>
+
                     <i class="fa fa-calendar" style="font-size:24px"></i>
                     <span id="datetime"></span>
+
+                    <i class="fa fa-calendar" style="font-size:24px"> 
+                        <span id="datetime"></span>   
+                    </i>
+
                 </h3>
                 <h2>Digital 3D</h2>
             </div>
