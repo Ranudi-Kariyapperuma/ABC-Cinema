@@ -68,7 +68,7 @@
     animation: fadeInUp 0.8s ease-out;
     transform: translateY(20px);
     margin: 100px auto;
-    margin-top: 300px;
+    margin-top: 280px;
 }
 
 
