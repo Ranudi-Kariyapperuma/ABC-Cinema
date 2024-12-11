@@ -81,7 +81,7 @@
 
         .back-home a {
             color:black;
-            text-decoration:black
+            text-decoration:black;
             font-size: 18px;
         }
 
