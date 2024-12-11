@@ -1,4 +1,11 @@
-# ABC Cinema Website 
+<h1 align="center">
+ 🎥 ABC Cinema Website 🍿
+</h1>
+
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/08e468af-777c-4fd5-878d-565cbc18ac59" alt="ABC Cinema" width="800"/>
+</div>
 
 This project aims to update the ABC Cinema website with new features like online ticket reservations, payment processing, feedback visualization, and SMS/Email notifications for reservation updates. It is developed using **JSP** and **Servlets**.
 
