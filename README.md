@@ -8,9 +8,9 @@
 </div>
 
 <br>
-<div align="center">
+
 This project aims to update the ABC Cinema website with new features like online ticket reservations, payment processing, feedback visualization, and SMS/Email notifications for reservation updates. It is developed using **JSP** and **Servlets**.
-</div>
+
 
 ## Team Structure
 
