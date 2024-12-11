@@ -8,25 +8,38 @@
 
         
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/favicon-icon" href="favicon.png">
   <script src="https://www.paypal.com/sdk/js?client-id=AQes_iUtXuLtdYV7fYwWwa8TTIHKOdVUs-CFGErWJ-27e2hq30CO9nYiHFbr0-kuKLzyQmG4XJL5w10m&currency=USD"></script>
+   <!--CDN link bootstrap!-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+         
+        <link rel="stylesheet" href="HomePage/homePageStyle.css">
   <title>Payment Form</title>
   <style>
+      
     /* Dark background with animated gradient */
-    body {
-      font-family: 'Arial', sans-serif;
+    
+    html{
+        
+        animation: darkBackground 12s ease-in-out infinite;
+    }
+   body {
+     font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: #000;
       color: #fff;
-      overflow: hidden;
+      overflow: auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 100%;
       flex-direction: column;
       animation: darkBackground 12s ease-in-out infinite;
     }
@@ -42,18 +55,22 @@
       100% {
         background: #1e1e2f;
       }
+      
     }
 
     /* Fade-in and smooth transition for container */
     .container {
-      background: rgba(30, 30, 47, 0.9);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-      width: 400px;
-      animation: fadeInUp 0.8s ease-out;
-      transform: translateY(20px);
-    }
+    background: rgba(30, 30, 47, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    animation: fadeInUp 0.8s ease-out;
+    transform: translateY(20px);
+    margin: 100px auto;
+    margin-top: 300px;
+}
+
 
     /* Fade-in up animation */
     @keyframes fadeInUp {
@@ -153,11 +170,31 @@
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 174, 255, 0.7);
     }
-    
+      
     
   </style>
 </head>
 <body>
+    
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+         
+                   
+               <h1 style="margin-left: 10px; color: white;">ABC CINEMA</h1> <br>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                       <li><a href="index.jsp">Home</a></li>
+                       <li><a href="movie.jsp">Movies</a></li>
+                       <li><a href="booking.jsp">Book Tickets</a></li>
+                       <li><a href="feedback.jsp">Feedback</a></li>
+                       <li><a href="contact.jsp">Contact Us</a></li>
+                       <li><a href="adminLogin.jsp">Login</a></li>
+                       </ul>
+                  </div>
+                
+                </nav>
+       
+ 
+ 
   <div class="container">
     <h1>Payment Details</h1>
     
@@ -225,7 +262,7 @@
       </form>
     </div>
   </div>
-
+ 
   <script>
     function toggleForm(method) {
       const formContainer = document.getElementById('form-container');
@@ -333,5 +370,38 @@
     }
     
   </script>
+    
+     <footer>
+        <div class="footer-icons">
+        <a href="https://instagram.com" target="_blank">
+            <img src="Images/icon1.png" alt="Instagram" class="icon">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="Images/icon2.png" alt="Twitter" class="icon">
+        </a>
+        <a href="" target="_blank">
+            <img src="Images/icon3.png" alt="Instagram" class="icon">
+        </a>
+        </div> 
+            <div class="footer-icons2">
+            <img src="Images/pngwing.com(2).png" alt="paypal" class="icon2">
+            <img src="Images/pngwing.com(4).png" alt="payment gate ways" class="icon2">
+        </div>
+        <p>© 2024 ABC Cinema. All Rights Reserved.</p>
+        <p>      <a href="pr.jsp">Privacy Policy</a>&ensp; &ensp; 
+                <a href="contact.jsp">Contact Us</a>&ensp;&ensp; 
+                <a href="tm.jsp">Terms and Conditions</a>&ensp; &ensp; 
+            </p>
+          
+    </footer>   
+          
+        <!-- Bootstrap JS Bundle -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
+        
 </body>
 </html>
