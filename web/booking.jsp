@@ -665,7 +665,7 @@
                 <input type="hidden" id="selectedSeats" name="selectedSeats" value="">
                 <input type="hidden" id="totalPrice" name="totalPrice" value="">
 
-            <button>Continue</button>
+            <button>Continue</button></form>
         </div>
     </div>
 
