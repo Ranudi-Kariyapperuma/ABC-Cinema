@@ -82,9 +82,9 @@
     </head>
     <body>
         <div class="form-container">
-            <form action="EmailNotification" method="post" class="email-form">
+            <form action="JavaMail2" method="post" class="email-form">
                 <h1>Email Notification</h1>
-                <input type="hidden" name="email" value="${user.email}">
+                <input type="email" id="recipient" name="email" value="${user.email}" required>
                 <input type="hidden" name="message" value="Your reservation has been confirmed!">
                 <button type="submit">Send Email</button>
             </form>
