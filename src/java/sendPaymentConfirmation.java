@@ -16,12 +16,12 @@ public class sendPaymentConfirmation extends HttpServlet {
         int         paymentID = Integer.parseInt(request.getParameter("paymentID"));
 
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             PaymentDetails paymentDetails = PaymentDAO.getPaymentDetails(paymentID);
 
             if (paymentDetails != null) {
-                String subject = "Payment Confirmation - ABC Cinema";
-                String body = String.format(
-                        "Dear %s,\n\nThank you for your payment!\n\nPayment Details:\n" +
+                String subject = "ABC Cinema Payment Confirmation";
+                String body = String.format("Dear %s,\n\nThank you for your payment!\n\nPayment Details:\n" +
                                 "Payment ID: %d\nAmount: $%.2f\nDate: %s\n\nBest regards,\nABC Cinema",
                         paymentDetails.getName(),
                         paymentDetails.getPaymentId(),
@@ -36,6 +36,7 @@ public class sendPaymentConfirmation extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            response.getWriter().println("An error occurred: " + e.getMessage());
              }
     }
 }
