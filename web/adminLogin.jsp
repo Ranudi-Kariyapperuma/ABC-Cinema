@@ -213,7 +213,7 @@
             if ((isAdmin && username === 'admin' && password === '1234') ||
                 (!isAdmin && username === 'user' && password === 'user123')) {
                 console.log('Credentials validated successfully. Redirecting...');
-                window.location.href = 'helloWorld.html';
+                window.location.href = 'dashboard.jsp';
                 return;
             }
 
