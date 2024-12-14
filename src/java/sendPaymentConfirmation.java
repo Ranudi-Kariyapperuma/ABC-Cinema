@@ -29,15 +29,14 @@ public class sendPaymentConfirmation extends HttpServlet {
                         paymentDetails.getPaymentDate()
                 );
 
-                JavaMail2.sendEmail(paymentDetails.getEmail(), subject, body);
+                JavaMail2.sendMail(paymentDetails.getEmail(), subject, body);
                 response.getWriter().println("Email sent successfully!");
             } else {
-                response.getWriter().println("Payment details not found.");
+                System.out.println("Payment details not found");
             }
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("An error occurred: " + e.getMessage());
-        }
+             }
     }
 }
 
