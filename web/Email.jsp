@@ -82,12 +82,11 @@
     </head>
     <body>
         <div class="form-container">
-            <form action="JavaMail2" method="post" class="email-form">
-                <h1>Email Notification</h1>
-                <input type="email" id="recipient" name="email" value="${user.email}" required>
-                <input type="hidden" name="message" value="Your reservation has been confirmed!">
-                <button type="submit">Send Email</button>
-            </form>
+            <form action="sendPaymentConfirmation" method="post">
+            <label for="paymentID">Enter Payment ID:</label>
+            <input type="text" id="paymentID" name="paymentID" required>
+            <button type="submit">Send Confirmation</button>
+        </form>
         </div>
     </body>
     </html>
