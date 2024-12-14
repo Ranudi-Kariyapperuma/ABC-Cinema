@@ -1,9 +1,3 @@
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.Properties;
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -14,26 +8,7 @@ import javax.mail.Transport;
 import javax.mail.internet.*;
 import javax.mail.internet.MimeMessage;
 
-
-@WebServlet("/JavaMail2")
-public class JavaMail2 extends HttpServlet {
-
-    static void sendMail(String receiver) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String recipient = request.getParameter("recipient"); // Get recipient email from the form
-        try {
-            JavaMail.sendMail(recipient);
-            response.getWriter().write("Email sent successfully!");
-        } catch (MessagingException e) {
-            e.printStackTrace();
-            response.getWriter().write("Error sending email: " + e.getMessage());
-        }
-    }
-    public class JavaMail {
+    public class JavaMail2 {
 
     public static void sendMail(String recepient) throws MessagingException{
         System.out.println("Preparing to send Email");
@@ -72,7 +47,7 @@ public class JavaMail2 extends HttpServlet {
             System.err.println("error found"+ ex.getMessage());
             throw new RuntimeException(ex);        }
         }
+    
     }
     
     
-}
