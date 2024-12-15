@@ -10,8 +10,8 @@ public class PaymentDAO {
     public static PaymentDetails getPaymentDetails(int paymentID) throws SQLException {
         PaymentDetails paymentDetails = null;
         String query = "SELECT p.paymentID, p.Amount, p.paymentDate, u.Name, u.Email " +
-                "FROM payment p INNER JOIN user u ON p.userID = u.userID " +
-                "WHERE u.Role='Customer'";
+                "FROM payment_details p INNER JOIN user u ON p.userID = u.userID " +
+                "WHERE u.Role=?";
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/abc_cinema","root","20242024");
 
