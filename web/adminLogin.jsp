@@ -22,6 +22,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ABC CINEMA Admin Login</title>
     </head>
+    
     <style>
         body {
             display: flex;
@@ -167,7 +168,7 @@
                 <label>Admin</label>
             </div>
             
-            <form method="post" action="">
+            <form method="post" action="adminLogin.jsp">
                 <input type="text" name="username" id="username" class="input-field" placeholder="USERNAME" required>
                 <input type="password" name="password" id="password" class="input-field" placeholder="PASSWORD" required>
                 <div class="checkbox">
@@ -280,7 +281,7 @@
                 
                 String dbURL = "jdbc:mysql://localhost:3306/ABC_Cinema"; 
                 String dbUser = "root"; 
-                String dbPassword = "admin"; 
+                String dbPassword = "20242024"; 
 
                 Connection conn = null;
                 PreparedStatement stmt = null;
@@ -295,7 +296,7 @@
                     conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
                     LOGGER.info("Database connection established successfully");
 
-                    String sql = "SELECT * FROM admins WHERE admin_username = ? AND admin_pw = ?";
+                    String sql = "SELECT * FROM admin WHERE admin_username = ? AND admin_pw = ?";
                     LOGGER.info("Preparing SQL statement: " + sql);
 
                     stmt = conn.prepareStatement(sql);
