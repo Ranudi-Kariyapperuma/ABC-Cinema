@@ -211,12 +211,16 @@
             console.log('Password entered:', password);
             console.log('Is Admin:', isAdmin);
 
-            if ((isAdmin && username === 'admin' && password === '1234') ||
+            /*if ((isAdmin && username === 'admin' && password === '1234') ||
                 (!isAdmin && username === 'user' && password === 'user123')) {
                 console.log('Credentials validated successfully. Redirecting...');
                 window.location.href = 'dashboard.jsp';
                 return;
-            }
+            }*/
+        
+         event.preventDefault(); 
+         document.querySelector('form').submit();
+
 
             console.log('Invalid credentials');
             errorMessage.textContent = 'Invalid username or password';
@@ -296,7 +300,7 @@
                     conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
                     LOGGER.info("Database connection established successfully");
 
-                    String sql = "SELECT * FROM admin WHERE admin_username = ? AND admin_pw = ?";
+                    String sql = "SELECT * FROM admin WHERE adminName = ? AND adminPassword = ?";
                     LOGGER.info("Preparing SQL statement: " + sql);
 
                     stmt = conn.prepareStatement(sql);
