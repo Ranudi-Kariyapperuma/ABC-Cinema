@@ -25,4 +25,14 @@
     <servlet-name>paymentServlet</servlet-name>
     <url-pattern>/paymentServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>bookingServlet</servlet-name>
+    <servlet-class>bookingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>bookingServlet</servlet-name>
+    <url-pattern>/bookingServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

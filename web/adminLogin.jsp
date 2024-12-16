@@ -148,7 +148,6 @@
                         <ul class="navbar-nav ms-auto">
                        <li><a href="index.jsp">Home</a></li>
                        <li><a href="movie.jsp">Movies</a></li>
-                       <li><a href="booking.jsp">Book Tickets</a></li>
                        <li><a href="feedback.jsp">Feedback</a></li>
                        <li><a href="contact.jsp">Contact Us</a></li>
                        <li><a href="adminLogin.jsp">Login</a></li>
