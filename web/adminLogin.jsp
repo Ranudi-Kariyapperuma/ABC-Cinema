@@ -285,7 +285,7 @@
                 
                 String dbURL = "jdbc:mysql://localhost:3306/ABC_Cinema"; 
                 String dbUser = "root"; 
-                String dbPassword = "20242024"; 
+                String dbPassword = "Ryq5#rgk"; 
 
                 Connection conn = null;
                 PreparedStatement stmt = null;

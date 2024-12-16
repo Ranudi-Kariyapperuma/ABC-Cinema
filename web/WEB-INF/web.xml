@@ -16,4 +16,13 @@
         <servlet-name>EmailNotification</servlet-name>
         <url-pattern>/EmailNotification</url-pattern>
     </servlet-mapping>
+    <servlet>
+    <servlet-name>paymentServlet</servlet-name>
+    <servlet-class>paymentServlet</servlet-class> <!-- Update with your package and class name -->
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>paymentServlet</servlet-name>
+    <url-pattern>/paymentServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

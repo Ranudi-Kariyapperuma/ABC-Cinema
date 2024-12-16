@@ -289,32 +289,52 @@
   
   // Render PayPal button
   paypal.Buttons({
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: '500.00' // Total price
+    createOrder: function (data, actions) {
+      // Call your servlet to create an order
+      return fetch('paymentServlet', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'action=createOrder',
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (orderData) {
+          if (orderData.status === 'success') {
+            return orderData.orderId; // Pass order ID to PayPal
+          } else {
+            throw new Error(orderData.message);
           }
-        }]
-      });
+        });
     },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        alert('Payment successful! ' + details.payer.name.given_name);
-        
-      });
+    onApprove: function (data, actions) {
+      // Capture the order on the server side
+      return fetch('paymentServlet', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'action=captureOrder&orderId=' + data.orderID,
+      })
+        .then(function (response) {
+          if (response.ok) {
+            // Redirect to success page
+            window.location.href = 'paymentsuccess.jsp';
+          } else {
+            // Redirect to cancel page
+            window.location.href = 'paymentcancel.jsp';
+          }
+        });
     },
-    onCancel: function(data) {
-      alert('Payment canceled');
-    },
-    onError: function(err) {
-      console.error('Error during payment: ', err);
-      alert('An error occurred during payment');
+    onError: function (err) {
+      console.error('PayPal Buttons Error:', err);
     }
-  }).render('#paypal-button-container'); 
-  
-  
-  } 
+  }).render('#paypal-button-container'); // Render the PayPal button
+
+     }
+   
   
       else {
         formContainer.innerHTML = `

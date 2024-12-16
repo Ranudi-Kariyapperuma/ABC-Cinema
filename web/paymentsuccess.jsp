@@ -111,7 +111,7 @@
     <h1>Payment Successful!</h1>
     <p>Your payment has been successfully processed.</p>
     <!-- OK button to redirect to confirmation.jsp -->
-    <button class="ok-button" onclick="window.location.href='confirmation.jsp'">OK</button>
+    <button class="ok-button" onclick="window.location.href='payment.jsp'">OK</button>
 </div>
 </body>
 </html>
