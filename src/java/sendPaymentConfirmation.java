@@ -13,8 +13,24 @@ public class sendPaymentConfirmation extends HttpServlet {
         @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
                 throws ServletException, IOException {
-        int         paymentID = Integer.parseInt(request.getParameter("paymentID"));
+        // Debug: Log all parameters
+    request.getParameterMap().forEach((key, value) -> {
+        System.out.println("Parameter: " + key + " = " + String.join(",", value));
+    });
+   
+        response.setContentType("text/html");
+        response.getWriter().println("<center><h1>Email Sent Successfully</h1></center>");
+        
+        String paymentIdParam = request.getParameter("paymentID");
 
+        // Validate the input
+        if (paymentIdParam == null || paymentIdParam.trim().isEmpty()) {
+            response.getWriter().println("Payment ID is required.");
+            return;
+        }
+        
+        int   paymentID = Integer.parseInt(request.getParameter("paymentID"));
+        
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             PaymentDetails paymentDetails = PaymentDAO.getPaymentDetails(paymentID);
