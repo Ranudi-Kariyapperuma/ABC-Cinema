@@ -53,20 +53,20 @@
                             <h5 class="card-title">The Queen's Gambit</h5>
                             <p class="card-text"> Orphaned chess prodigy Beth Harmon fights addiction while aiming to become the world's greatest chess player during the Cold War.</p>
                             <div class="center-container">
-                                <a href="bookingServlet?movie=1" class="btn btn-primary">Book Now</a>
+                                <a href="bookingServlet?movie=3" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Movie Card 2 -->
                 <div class="col-md-4">
-                    <div class="card"style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <img src="Images/png2.jpg" class="card-img-top" alt="Movie 2">
                         <div class="card-body">
                             <h5 class="card-title">Shrew's Nest</h5>
                             <p class="card-text"> Montse, an agoraphobic woman, is forced to shelter her injured neighbor who crawls to her door, disrupting her solitary life.</p>
                             <div class="center-container">
-                                <a href="bookingServlet?movie=2" class="btn btn-primary">Book Now</a>
+                                <a href="bookingServlet?movie=4" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                             <p class="card-text"> Manikarnika, the queen of Jhansi, defies the East India Company’s attempt to annex her kingdom, sparking a fierce revolution against British rule.</p>
                             <div class="center-container">
                                 <div class="center-container">
-                                    <a href="bookingServlet?movie=3" class="btn btn-primary">Book Now</a>
+                                    <a href="bookingServlet?movie=5" class="btn btn-primary">Book Now</a>
                                 </div>
                             </div>
                         </div>
