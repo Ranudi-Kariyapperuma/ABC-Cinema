@@ -151,7 +151,7 @@ footer  a:hover{
     padding: 10px;
  }
 
-.container btn-primary{
+.btn-primary{
             background-color: #ffeb3b; 
             color: #000;
             border: none;
@@ -168,7 +168,7 @@ footer  a:hover{
    
 }
 
-.container btn-primary a:hover{
+.btn-primary a:hover{
      transform: translateY(-3px);
      box-shadow: 0 5px 10px rgba(255, 235, 59, 0.5);
     
