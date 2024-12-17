@@ -282,9 +282,9 @@
             if (username != null && password != null) {
                 LOGGER.info("Username and password received");
                 
-                String dbURL = "jdbc:mysql://localhost:3306/ABC_Cinema"; 
+                String dbURL = "jdbc:mysql://localhost:3306/abc_cinema"; 
                 String dbUser = "root"; 
-                String dbPassword = "Ryq5#rgk"; 
+                String dbPassword = "20242024"; 
 
                 Connection conn = null;
                 PreparedStatement stmt = null;
