@@ -153,6 +153,9 @@
                 <a href="#">
                     <i class="fas fa-bell" style="margin-right: 10px;"></i> Notification
                 </a>
+                <a href="confirmation.jsp">
+                    <i class="fas fa-bell" style="margin-right: 10px;"></i> Reservation
+                </a>
             </nav>
         </div>
     </div>
