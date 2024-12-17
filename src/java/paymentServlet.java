@@ -137,7 +137,7 @@ public class paymentServlet extends HttpServlet {
 
         List<PurchaseUnitRequest> purchaseUnits = new ArrayList<>();
         PurchaseUnitRequest purchaseUnit = new PurchaseUnitRequest()
-                .amountWithBreakdown(new AmountWithBreakdown().currencyCode("USD").value("500.00"));
+                .amountWithBreakdown(new AmountWithBreakdown().currencyCode("USD").value("6.21"));
         purchaseUnits.add(purchaseUnit);
         orderRequest.purchaseUnits(purchaseUnits);
 
