@@ -128,6 +128,14 @@
                 <li><strong>Seats:</strong> </li>
                 <li><strong>Payment ID:</strong> </li>
             </ul>
+            <form action="sendPaymentConfirmation" method="post" class="email-form">
+                <label for="paymentID">Enter Payment ID:</label>
+                 <input type="text" id="paymentID" name="paymentID" required>
+                 <%-- <input type="hidden" name="email" value="${user.email}">
+                <input type="hidden" name="message" value="Your reservation has been confirmed!">--%>
+                <button type="submit">Send Email</button>
+            </form>
+
         </div>
 
         <div class="actions">
