@@ -9,7 +9,7 @@
     <body>
         <input type="hidden" id="status" value="<%= request.getAttribute("status") != null ? request.getAttribute("status") : "" %>">
         <div class="wrapper">
-            <form method="post" action="Register" class="signupform">
+            <form method="post" action="register" class="signupform">
                 <h2 style="color: #808080">Register</h2>
                 <div class="input-field">
                     <input type="text" name="uname" required>
