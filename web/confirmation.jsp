@@ -122,11 +122,11 @@
         <div class="reservation-details">
             <h2>Your Reservation Details</h2>
             <ul>
-                <li><strong>Movie:</strong> </li>
-                <li><strong>Date:</strong> </li>
-                <li><strong>Time:</strong> </li>
-                <li><strong>Seats:</strong> </li>
-                <li><strong>Payment ID:</strong> </li>
+                <li><strong>Movie: Queen's Gambit </strong> </li>
+                <li><strong>Date: December 3rd</strong> </li>
+                <li><strong>Time: 3 to 5 P.M</strong> </li>
+                <li><strong>Seats: 2</strong> </li>
+                <li><strong>Payment ID: 1001</strong> </li>
             </ul>
             <form action="sendPaymentConfirmation" method="post" class="email-form">
                 <label for="paymentID">Enter Payment ID:</label>
