@@ -28,7 +28,7 @@ public class DBconnection {
      // Update with MySQL server details
     private static final String URL = "jdbc:mysql://localhost:3306/abc_cinema"; // MySQL URL
     private static final String USERNAME = "root"; // MySQL username
-    private static final String PASSWORD = "Ryq5#rgk"; // MySQL password
+    private static final String PASSWORD = "20242024"; // MySQL password
 
     public static Connection getConnection() {
         Connection conn = null;
