@@ -97,7 +97,7 @@
                             <h5 class="card-title">Avatar</h5>
                             <p class="card-text">Avatar follows a paraplegic marine who explores a lush alien world and becomes involved in a battle to protect its indigenous inhabitants from exploitation.</p>
                             <div class="center-container">
-                                <a href="bookingServlet?movie=4" class="btn btn-primary">Book Now</a>
+                                <a href="bookingServlet?movie=2" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             <h5 class="card-title">Gole</h5>
                             <p class="card-text">Gole is a film that explores the complexities of love, identity, and societal expectations through the emotional journey of its central characters.</p>
                             <div class="center-container">
-                                <a href="bookingServlet?movie=5" class="btn btn-primary">Book Now</a>
+                                <a href="bookingServlet?movie=1" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
