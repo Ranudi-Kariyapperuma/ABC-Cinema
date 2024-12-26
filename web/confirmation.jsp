@@ -4,6 +4,8 @@
     Author     : DELL
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -135,6 +137,50 @@
                 <input type="hidden" name="message" value="Your reservation has been confirmed!">--%>
                 <button type="submit">Send Email</button>
             </form>
+              <div class="container">
+        <div class="reservation-details">
+            <h1>Payment Successful!</h1>
+            <div class="details-row">
+                <p>Movie Name:</p>
+                <span>Dummy Movie Name</span>
+            </div>
+            <div class="details-row">
+                <p>Date:</p>
+                <span><%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %></span>
+            </div>
+            <div class="details-row">
+                <p>Time:</p>
+                <span><%= new java.text.SimpleDateFormat("HH:mm:ss").format(new java.util.Date()) %></span>
+            </div>
+            <div class="details-row">
+                <p>Number of Seats:</p>
+                <span>
+                    <% 
+                        String selectedSeatsJson = (String) session.getAttribute("selectedSeats");
+                        if (selectedSeatsJson != null) {
+                            try {
+                                Gson gson = new Gson();
+                                List<Map<String, String>> selectedSeats = gson.fromJson(
+                                    selectedSeatsJson, 
+                                    new TypeToken <List<Map<String, String>>>(){}.getType()
+                                );
+                                for (Map<String, String> seat : selectedSeats) {
+                                    out.println("<p>Seat: " + seat.get("seat") + " | Type: " + seat.get("type") + "</p>");
+                                }
+                            } catch (Exception e) {
+                                out.println("<p>Error parsing seat data.</p>");
+                            }
+                        } else {
+                            out.println("<p>No seats selected.</p>");
+                        }
+                    %>
+                </span>
+            </div>
+            <div class="details-row">
+                <p>Payment ID:</p>
+                <span>DummyPayment12345</span>
+            </div>
+            <h2>Thank you for booking with us!</h2>  
 
         </div>
 

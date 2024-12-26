@@ -200,7 +200,7 @@
     
     <!-- Total Business Section -->
     <div id="total-business" style="margin-bottom: 1.5rem;">
-      <h2 style="font-size: 1.25rem; color: #00c4cc; text-align: center;">Total Price: $500.00</h2>
+      <h2 style="font-size: 1.25rem; color: #00c4cc; text-align: center;">Total Price: Rs.1800.00</h2>
       <p style="font-size: 1rem; color: #ccc; text-align: center;">The Total Cost For Your Payment</p>
     </div>
 
@@ -390,7 +390,28 @@
     }
     
   </script>
-    
+
+        <%@ page session="true" %> <!-- Ensure session is enabled -->
+
+      <%
+          // Retrieve data from the form (data sent from booking.jsp)
+          String movieName = request.getParameter("movieName");
+          String selectedSeats = request.getParameter("selectedSeats");
+          String totalPrice = request.getParameter("totalPrice");
+
+          // Store the data in session
+          session.setAttribute("movieName", movieName);
+          session.setAttribute("selectedSeats", selectedSeats);
+          session.setAttribute("totalPrice", totalPrice);
+      %>
+
+      <!-- Payment processing code here -->
+
+      <!-- Button to proceed to confirmation page -->
+      <form action="confirmation.jsp" method="post">
+          <button type="submit">Proceed to Confirmation</button>
+      </form>
+      
      <footer>
         <div class="footer-icons">
         <a href="https://instagram.com" target="_blank">

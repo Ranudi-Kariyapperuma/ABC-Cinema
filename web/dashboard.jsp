@@ -138,7 +138,7 @@
                 <p style="font-size: 18px; margin: 0;">Welcome to Admin</p>
             </div>
             <nav>
-                <a href="#">
+                <a href="index.jsp">
                     <i class="fas fa-home" style="margin-right: 10px;"></i> Home
                 </a>
                 <a href="dashboard.jsp">
@@ -150,7 +150,7 @@
                 <a href="admin-movies.jsp">
                     <i class="fas fa-edit" style="margin-right: 10px;"></i> Add/Edit Movies
                 </a>
-                <a href="#">
+                <a href="Email.jsp">
                     <i class="fas fa-bell" style="margin-right: 10px;"></i> Notification
                 </a>
                 <a href="confirmation.jsp">

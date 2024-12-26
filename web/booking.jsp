@@ -755,6 +755,52 @@
         element.disabled = true;
         element.style.color = "white";
     }
+    const seatPrices = {
+        adult: 1800,
+        child: 1500
+    };
+
+    let selectedSeats = [];
+
+    function selectSeat(button) {
+        const seatID = button.value;
+
+        // Check if seat is already selected
+        if (selectedSeats.some(seat => seat.seat === seatID)) {
+            // Remove seat
+            selectedSeats = selectedSeats.filter(seat => seat.seat !== seatID);
+            button.classList.remove("selected");
+            button.style.backgroundColor = 'gainsboro';
+        } else {
+            // Prompt for seat type (adult/child)
+            const ageGroup = prompt("Enter 'adult' or 'child' for " + seatID);
+            if (ageGroup === "adult" || ageGroup === "child") {
+                selectedSeats.push({ seat: seatID, type: ageGroup });
+                button.classList.add("selected");
+                button.style.backgroundColor = 'blue';
+            } else {
+                alert("Invalid selection. Please enter 'adult' or 'child'.");
+            }
+        }
+
+        // Update hidden fields with selected seats and total price
+        updateFormFields();
+    }
+
+    function updateFormFields() {
+        const seatField = document.getElementById("selectedSeats");
+        const priceField = document.getElementById("totalPrice");
+
+        // Calculate total price
+        const totalPrice = selectedSeats.reduce((sum, seat) => {
+            return sum + seatPrices[seat.type];
+        }, 0);
+
+        // Update form hidden fields
+        seatField.value = JSON.stringify(selectedSeats);
+        priceField.value = totalPrice;
+    };
+    
 </script>
 </body>
 </html>

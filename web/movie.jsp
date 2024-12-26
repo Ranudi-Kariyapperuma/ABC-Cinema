@@ -104,7 +104,7 @@
                 </div>
                 <!-- Movie Card 2 -->
                 <div class="col-md-4">
-                    <div class="card"style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <img src="Images/goal.jpg" class="card-img-top" alt="Movie 2">
                         <div class="card-body">
                             <h5 class="card-title">Gole</h5>
