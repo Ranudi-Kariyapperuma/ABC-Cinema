@@ -25,7 +25,8 @@ public class sendPaymentConfirmation extends HttpServlet {
 
         // Validate the input if its null or empty
         if (paymentIdParam == null || paymentIdParam.trim().isEmpty()) {
-            response.getWriter().println("Payment ID is required.");
+           response.sendRedirect("confirmation.jsp?emailStatus=failure"); 
+        //response.getWriter().println("Payment ID is required.");
             return;
         }
         
@@ -48,14 +49,24 @@ public class sendPaymentConfirmation extends HttpServlet {
                 );
 
                 JavaMail2.sendMail(paymentDetails.getEmail(), subject, body);
-                response.getWriter().println("Email sent successfully!");
+                 response.sendRedirect("confirmation.jsp?emailStatus=success");
+            } else {
+                response.sendRedirect("confirmation.jsp?emailStatus=failure");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("confirmation.jsp?emailStatus=failure");
+        }
+            
+        
+        /*response.getWriter().println("Email sent successfully!");
             } else {
                 System.out.println("Payment details not found");
             }
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().println("An error occurred: " + e.getMessage());
-             }
+             }*/
     }
 }
 

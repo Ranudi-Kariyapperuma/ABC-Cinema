@@ -123,39 +123,24 @@
                 </nav>
          <div class="container">
         <h1>Reservation Confirmation</h1>
-        <div class="reservation-details">
-            <h2>Your Reservation Details</h2>
-            <ul>
-                <li><strong>Movie: Queen's Gambit </strong> </li>
-                <li><strong>Date: December 3rd</strong> </li>
-                <li><strong>Time: 3 to 5 P.M</strong> </li>
-                <li><strong>Seats: 2</strong> </li>
-                <li><strong>Payment ID: 1001</strong> </li>
-            </ul>
-            <form action="sendPaymentConfirmation" method="post" class="email-form">
-                <label for="paymentID">Enter Payment ID:</label>
-                 <input type="text" id="paymentID" name="paymentID" required>
-                 <%-- <input type="hidden" name="email" value="${user.email}">
-                <input type="hidden" name="message" value="Your reservation has been confirmed!">--%>
-                <button type="submit">Send Email</button>
-            </form>
+      
               <div class="container">
         <div class="reservation-details">
             <h1>Payment Successful!</h1>
             <div class="details-row">
-                <p>Movie Name:</p>
-                <span>Dummy Movie Name</span>
+                <p>Movie Name:
+                    <span>Dummy Movie Name</span></p>
             </div>
             <div class="details-row">
-                <p>Date:</p>
-                <span><%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %></span>
+                <p>Date:
+                    <span><%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %></span></p>
             </div>
             <div class="details-row">
-                <p>Time:</p>
-                <span><%= new java.text.SimpleDateFormat("HH:mm:ss").format(new java.util.Date()) %></span>
+                <p>Time:
+                <span><%= new java.text.SimpleDateFormat("HH:mm:ss").format(new java.util.Date()) %></span></p>
             </div>
             <div class="details-row">
-                <p>Number of Seats:</p>
+                <p>Number of Seats:
                 <span>
                     <% 
                         String selectedSeatsJson = (String) session.getAttribute("selectedSeats");
@@ -176,17 +161,23 @@
                             out.println("<p>No seats selected.</p>");
                         }
                     %>
-                </span>
+                </span></p>
             </div>
             <div class="details-row">
-                <p>Payment ID:</p>
-                <span>DummyPayment12345</span>
+                <p>Payment ID:
+                <span>1001</span></p>
             </div>
             <h2>Thank you for booking with us!</h2>  
-
         </div>
 
         <div class="actions">
+            <form action="sendPaymentConfirmation" method="post" class="email-form">
+                <label for="paymentID">Enter Payment ID (Double confirmation):</label>
+                 <input type="text" id="paymentID" name="paymentID" required>
+                 <%-- <input type="hidden" name="email" value="${user.email}">
+                <input type="hidden" name="message" value="Your reservation has been confirmed!">--%>
+                <button type="submit">Send Email</button>
+            </form>
             <button id="downloadTicketBtn">Download Ticket as PDF</button>
             <button id="printTicketBtn" onclick="window.print()">Print Ticket</button>
         </div>
@@ -228,6 +219,18 @@
 
     <script src="ticket.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    </body>
+    <script>
+    // Check if the email status is present in the query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const emailStatus = urlParams.get('emailStatus');
+
+    if (emailStatus === 'success') {
+        alert('Email sent successfully!');
+    } else if (emailStatus === 'failure') {
+        alert('Failed to send email. Please try again.');
+    }
+    </script>
+
+         </body>
 </html>
 
