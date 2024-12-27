@@ -9,7 +9,7 @@
         <servlet-class>EmailNotification</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LoginServlet</servlet-name>
+        <servlet-name>/Login</servlet-name>
         <servlet-class>LoginServlet</servlet-class>
     </servlet>
     <servlet>
@@ -59,7 +59,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistrationServlet</servlet-name>
-        <url-pattern>/Registration</url-pattern>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ConfirmationServlet</servlet-name>

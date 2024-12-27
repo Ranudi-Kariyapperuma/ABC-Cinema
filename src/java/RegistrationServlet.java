@@ -11,8 +11,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 @WebServlet(name = "RegistrationServlet", urlPatterns = {"/Register"})
 public class RegistrationServlet extends HttpServlet {
@@ -23,14 +23,19 @@ public class RegistrationServlet extends HttpServlet {
         String uname = request.getParameter("uname");
         String uemail = request.getParameter("email");
         String upswd = request.getParameter("pswd");
+                
+        System.out.println("data catched........");
+        System.out.println(uname);
+        System.out.println(uemail);
+        System.out.println(upswd);
         RequestDispatcher dispatcher = null;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shenal", "root", "admin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shenal", "root", "1234");
 
 
-            PreparedStatement checkStmt = con.prepareStatement("SELECT * FROM users WHERE uemail=?");
+            PreparedStatement checkStmt = con.prepareStatement("SELECT * FROM user WHERE email=?");
             checkStmt.setString(1, uemail);
             ResultSet rs = checkStmt.executeQuery();
 
@@ -40,10 +45,11 @@ public class RegistrationServlet extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("register.jsp");
             } else {
   
-                PreparedStatement pst = con.prepareStatement("INSERT INTO users (uname, uemail, upwd) VALUES (?, ?, ?)");
+                PreparedStatement pst = con.prepareStatement("INSERT INTO user (name, email, role, password) VALUES (?, ?, ?, ?)");
                 pst.setString(1, uname);
                 pst.setString(2, uemail);
-                pst.setString(3, upswd);
+                pst.setString(3, "Customer");
+                pst.setString(4, upswd);
                 int result = pst.executeUpdate();
 
                 if (result > 0) {
@@ -56,8 +62,7 @@ public class RegistrationServlet extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("register.jsp");
             }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException | SQLException e) {
             request.setAttribute("status", "signupFailed");
             dispatcher = request.getRequestDispatcher("register.jsp");
         }

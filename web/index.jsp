@@ -34,7 +34,7 @@
                         <li><a href="movie.jsp">Movies</a></li>
                         <li><a href="feedback.jsp">Feedback</a></li>
                         <li><a href="contact.jsp">Contact Us</a></li>
-                        <li><a href="adminLogin.jsp">Login</a></li>
+                        <li><a href="login.jsp">Login</a></li>
                     </ul>
                 </div>
 
