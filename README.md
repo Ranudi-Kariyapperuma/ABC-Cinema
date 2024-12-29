@@ -12,12 +12,16 @@
 This project aims to update the ABC Cinema website with new features like online ticket reservations, payment processing, feedback visualization, and SMS/Email notifications for reservation updates. It is developed using **JSP** and **Servlets**.
 
 
-## Team Structure
+## Team Contribution
 
-- **Frontend**: Ranudi, Naduni, Tharindi, Prageeth (`frontend-dev` branch)
-- **Backend**: Ranudi, Naduni, Himasha, Nethsara, Prageeth, Shenal (`backend-dev` branch)
-- **Notifications**: Ranudi, Naduni, Senugi, Shenal (`notification-feature` branch)
-- **Payment**: Ranudi, Naduni, Tharindi, Nethsara (`payment-feature` branch)
+- Naduni - Home page and email verification
+- Prageeth - feedback page and contact us page
+- Ranudi - movie page and payment page
+- Shenal - user login and registration page
+- Tharindi - reservation confirmation page
+- Himasha - booking page
+- Nethsara - admin page
+- Senugi - admin page
 
 ## Features
 - **Online Ticket Reservation**
